@@ -8,10 +8,10 @@ import { RtlProvider } from 'components/rtlProvider/RtlProvider.js';
 import { SidebarContext } from 'contexts/SidebarContext';
 import React, { useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import routes from 'routes.tsx';
+import routes from 'routes';
 
 // Custom Chakra theme
-export default function Dashboard(props) {
+export default function Dashboard(props: any) {
 	const { ...rest } = props;
 	// states and functions
 	const [ fixed ] = useState(false);
@@ -20,83 +20,84 @@ export default function Dashboard(props) {
 	const getRoute = () => {
 		return window.location.pathname !== '/rtl/full-screen-maps';
 	};
-	const getActiveRoute = (routes) => {
+	const getActiveRoute = (
+		routes: {
+			name: string;
+			layout: string;
+			component: any;
+			secondary?: boolean;
+			path: string;
+		}[]
+	): string => {
 		let activeRoute = 'Default Brand Text';
 		for (let i = 0; i < routes.length; i++) {
-			if (routes[i].collapse) {
-				let collapseActiveRoute = getActiveRoute(routes[i].items);
-				if (collapseActiveRoute !== activeRoute) {
-					return collapseActiveRoute;
-				}
-			} else if (routes[i].category) {
-				let categoryActiveRoute = getActiveRoute(routes[i].items);
-				if (categoryActiveRoute !== activeRoute) {
-					return categoryActiveRoute;
-				}
-			} else {
-				if (window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1) {
-					return routes[i].name;
-				}
+			if (window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1) {
+				return routes[i].name;
 			}
 		}
 		return activeRoute;
 	};
-	const getActiveNavbar = (routes) => {
+	const getActiveNavbar = (
+		routes: {
+			name: string;
+			layout: string;
+			component: any;
+			secondary?: boolean;
+			path: string;
+		}[]
+	): boolean => {
 		let activeNavbar = false;
 		for (let i = 0; i < routes.length; i++) {
-			if (routes[i].collapse) {
-				let collapseActiveNavbar = getActiveNavbar(routes[i].items);
-				if (collapseActiveNavbar !== activeNavbar) {
-					return collapseActiveNavbar;
-				}
-			} else if (routes[i].category) {
-				let categoryActiveNavbar = getActiveNavbar(routes[i].items);
-				if (categoryActiveNavbar !== activeNavbar) {
-					return categoryActiveNavbar;
-				}
-			} else {
-				if (window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1) {
-					return routes[i].secondary;
-				}
+			if (window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1) {
+				return routes[i].secondary;
 			}
 		}
 		return activeNavbar;
 	};
-	const getActiveNavbarText = (routes) => {
+	const getActiveNavbarText = (
+		routes: {
+			name: string;
+			layout: string;
+			component: any;
+			secondary?: boolean;
+			path: string;
+		}[]
+	): string | boolean => {
 		let activeNavbar = false;
 		for (let i = 0; i < routes.length; i++) {
-			if (routes[i].collapse) {
-				let collapseActiveNavbar = getActiveNavbarText(routes[i].items);
-				if (collapseActiveNavbar !== activeNavbar) {
-					return collapseActiveNavbar;
-				}
-			} else if (routes[i].category) {
-				let categoryActiveNavbar = getActiveNavbarText(routes[i].items);
-				if (categoryActiveNavbar !== activeNavbar) {
-					return categoryActiveNavbar;
-				}
-			} else {
-				if (window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1) {
-					return routes[i].messageNavbar;
-				}
+			if (window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1) {
+				return routes[i].name;
 			}
 		}
 		return activeNavbar;
 	};
-	const getRoutes = (routes) => {
-		return routes.map((prop, key) => {
-			if (prop.layout === '/rtl') {
-				return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
+	const getRoutes = (
+		routes: {
+			name: string;
+			layout: string;
+			component: any;
+			secondary?: boolean;
+			path: string;
+		}[]
+	): any => {
+		return routes.map(
+			(
+				prop: {
+					name: string;
+					layout: string;
+					component: any;
+					secondary?: boolean;
+					path: string;
+				},
+				key: any
+			) => {
+				if (prop.layout === '/rtl') {
+					return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
+				} else {
+					return null;
+				}
 			}
-			if (prop.collapse) {
-				return getRoutes(prop.items);
-			}
-			if (prop.category) {
-				return getRoutes(prop.items);
-			} else {
-				return null;
-			}
-		});
+		);
 	};
 	document.documentElement.dir = 'rtl';
 	const { onOpen } = useDisclosure();

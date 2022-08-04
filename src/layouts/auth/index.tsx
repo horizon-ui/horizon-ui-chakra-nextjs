@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import routes from 'routes.tsx';
+import routes from 'routes';
 
 // Chakra imports
 import { Box, useColorModeValue } from '@chakra-ui/react';
@@ -11,25 +11,37 @@ import { SidebarContext } from 'contexts/SidebarContext';
 // Custom Chakra theme
 export default function Auth() {
 	// states and functions
-	const [ toggleSidebar, setToggleSidebar ] = useState(false);
-	// functions for changing the states from components
+	const [ toggleSidebar, setToggleSidebar ] = useState(false); 
 	const getRoute = () => {
 		return window.location.pathname !== '/auth/full-screen-maps';
 	};
-	const getRoutes = (routes) => {
-		return routes.map((prop, key) => {
-			if (prop.layout === '/auth') {
-				return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
+	const getRoutes = (
+		routes: {
+			name: string;
+			layout: string;
+			component: any;
+			secondary?: boolean;
+			path: string;
+		}[]
+	): any => {
+		return routes.map(
+			(
+				prop: {
+					name: string;
+					layout: string;
+					component: any;
+					secondary?: boolean;
+					path: string;
+				},
+				key: any
+			) => {
+				if (prop.layout === '/auth') {
+					return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
+				} else {
+					return null;
+				}
 			}
-			if (prop.collapse) {
-				return getRoutes(prop.items);
-			}
-			if (prop.category) {
-				return getRoutes(prop.items);
-			} else {
-				return null;
-			}
-		});
+		);
 	};
 	const authBg = useColorModeValue('white', 'navy.900');
 	document.documentElement.dir = 'ltr';
