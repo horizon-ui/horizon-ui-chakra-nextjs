@@ -6,7 +6,7 @@ import Navbar from 'components/navbar/NavbarRTL.js';
 import Sidebar from 'components/sidebar/Sidebar';
 import { RtlProvider } from 'components/rtlProvider/RtlProvider.js';
 import { SidebarContext } from 'contexts/SidebarContext';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import routes from 'routes';
 
