@@ -25,8 +25,8 @@ import navImage from 'assets/img/layout/Navbar.png';
 import { MdNotificationsNone, MdInfoOutline } from 'react-icons/md';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import { FaEthereum } from 'react-icons/fa';
-import routes from 'routes.tsx';
-export default function HeaderLinks(props) {
+import routes from 'routes';
+export default function HeaderLinks(props: { secondary: boolean }) {
 	const { secondary } = props;
 	const { colorMode, toggleColorMode } = useColorMode();
 	// Chakra Color Mode
@@ -88,7 +88,7 @@ export default function HeaderLinks(props) {
 					me={{ base: '30px', md: 'unset' }}
 					minW={{ base: 'unset', md: '400px', xl: '450px' }}
 					maxW={{ base: '360px', md: 'unset' }}>
-					<Flex jusitfy='space-between' w='100%' mb='20px'>
+					<Flex w='100%' mb='20px'>
 						<Text fontSize='md' fontWeight='600' color={textColor}>
 							Notifications
 						</Text>

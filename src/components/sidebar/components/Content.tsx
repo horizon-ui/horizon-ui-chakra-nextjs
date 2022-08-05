@@ -12,7 +12,7 @@ function SidebarContent(props: {
 		name: string;
 		layout: string;
 		component: any;
-		icon: string;
+		icon: any;
 		secondary?: boolean;
 		path: string;
 	}[];
