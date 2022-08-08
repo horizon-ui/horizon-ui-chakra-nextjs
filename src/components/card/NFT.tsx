@@ -1,7 +1,7 @@
 // Chakra imports
 import { AvatarGroup, Avatar, Box, Button, Flex, Icon, Image, Link, Text, useColorModeValue } from '@chakra-ui/react';
 // Custom components
-import Card from 'components/card/Card.js';
+import Card from 'components/card/Card';
 // Assets
 import { useState } from 'react';
 import { IoHeart, IoHeartOutline } from 'react-icons/io5';
