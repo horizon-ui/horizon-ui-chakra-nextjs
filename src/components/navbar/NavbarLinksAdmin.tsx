@@ -107,10 +107,10 @@ export default function HeaderLinks(props: { secondary: boolean }) {
 					</Flex>
 					<Flex flexDirection='column'>
 						<MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} px='0' borderRadius='8px' mb='10px'>
-							<ItemContent info='Horizon UI Dashboard PRO' aName='Alicia' />
+							<ItemContent info='Horizon UI Dashboard PRO' />
 						</MenuItem>
 						<MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} px='0' borderRadius='8px' mb='10px'>
-							<ItemContent info='Horizon Design System Free' aName='Josh Henry' />
+							<ItemContent info='Horizon Design System Free' />
 						</MenuItem>
 					</Flex>
 				</MenuList>
