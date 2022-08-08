@@ -5,7 +5,7 @@ import { Flex, FormLabel, Input, Text, useColorModeValue } from '@chakra-ui/reac
 export default function Default(props: {
 	id: string;
 	label: string;
-	extra: any;
+	extra: JSX.Element;
 	placeholder: string;
 	type: string;
 	mb: any;

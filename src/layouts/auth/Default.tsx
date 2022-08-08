@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 // Assets
 import { FaChevronLeft } from 'react-icons/fa';
 
-function AuthIllustration(props: { children: any; illustrationBackground: string }) {
+function AuthIllustration(props: { children: JSX.Element | string; illustrationBackground: string }) {
 	const { children, illustrationBackground } = props;
 	// Chakra color mode
 	return (

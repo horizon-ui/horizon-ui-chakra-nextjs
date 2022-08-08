@@ -3,7 +3,13 @@ import { Flex, Stat, StatLabel, StatNumber, useColorModeValue, Text } from '@cha
 // Custom components
 import Card from 'components/card/Card.js';
 
-export default function Default(props: any) {
+export default function Default(props: {
+	startContent?: JSX.Element;
+	endContent?: JSX.Element;
+	name: string;
+	growth?: string | number;
+	value: string | number;
+}) {
 	const { startContent, endContent, name, growth, value } = props;
 	const textColor = useColorModeValue('secondaryGray.900', 'white');
 	const textColorSecondary = 'secondaryGray.600';

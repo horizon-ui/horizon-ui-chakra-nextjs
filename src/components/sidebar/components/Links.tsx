@@ -8,8 +8,8 @@ export function SidebarLinks(props: {
 	routes: {
 		name: string;
 		layout: string;
-		component: any;
-		icon: any;
+		component:any;
+		icon: JSX.Element|string;
 		secondary?: boolean;
 		path: string;
 	}[];
@@ -34,8 +34,8 @@ export function SidebarLinks(props: {
 		routes: {
 			name: string;
 			layout: string;
-			component: any;
-			icon: any;
+			component:JSX.Element[];
+			icon: JSX.Element|string;
 			secondary?: boolean;
 			path: string;
 		}[]
@@ -46,7 +46,7 @@ export function SidebarLinks(props: {
 					name: string;
 					layout: string;
 					component: any;
-					icon: any;
+					icon: JSX.Element|string;
 					secondary?: boolean;
 					path: string;
 				},

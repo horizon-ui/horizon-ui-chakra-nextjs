@@ -1,8 +1,6 @@
 // Chakra imports
 import { Box, Flex, FormLabel, Switch, Text, useColorModeValue } from '@chakra-ui/react';
 // Custom components
-import React from 'react';
-
 export default function Default(props: {
 	id: string;
 	label: string;

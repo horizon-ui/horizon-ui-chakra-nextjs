@@ -3,7 +3,7 @@ import { SearchIcon } from '@chakra-ui/icons';
 export function SearchBar(props: {
 	variant?: string;
 	background?: string;
-	children?: any;
+	children?: JSX.Element;
 	placeholder?: string;
 	borderRadius?: string | number;
 	mb?: any;
