@@ -63,6 +63,7 @@
 		]
 	},
 	"devDependencies": {
+		"@types/react-calendar": "^3.5.2",
 		"@types/react-router-dom": "^5.3.3",
 		"gh-pages": "^3.2.3"
 	}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import 'assets/css/MiniCalendar.css';
@@ -8,11 +8,18 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 // Custom components
 import Card from 'components/card/Card';
 
-export default function MiniCalendar(props) {
+export default function MiniCalendar(props: { selectRange: boolean; [x: string]: any }) {
 	const { selectRange, ...rest } = props;
 	const [ value, onChange ] = useState(new Date());
 	return (
-		<Card align='center' direction='column' w='100%' maxW='max-content' p='20px 15px' h='max-content' {...rest}>
+		<Card
+			alignItems='center'
+			flexDirection='column'
+			w='100%'
+			maxW='max-content'
+			p='20px 15px'
+			h='max-content'
+			{...rest}>
 			<Calendar
 				onChange={onChange}
 				value={value}

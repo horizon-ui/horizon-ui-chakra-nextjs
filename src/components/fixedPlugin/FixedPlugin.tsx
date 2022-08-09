@@ -4,7 +4,7 @@ import { Button, Icon, useColorMode } from '@chakra-ui/react';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import React from 'react';
 
-export default function FixedPlugin(props: any) {
+export default function FixedPlugin(props: { [x: string]: any }) {
 	const { ...rest } = props;
 	const { colorMode, toggleColorMode } = useColorMode();
 	let bgButton = 'linear-gradient(135deg, #868CFF 0%, #4318FF 100%)';
@@ -27,8 +27,8 @@ export default function FixedPlugin(props: any) {
 			onClick={toggleColorMode}
 			display='flex'
 			p='0px'
-			align='center'
-			justify='center'>
+			alignItems='center'
+			justifyContent='center'>
 			<Icon h='24px' w='24px' color='white' as={colorMode === 'light' ? IoMdMoon : IoMdSunny} />
 		</Button>
 	);
