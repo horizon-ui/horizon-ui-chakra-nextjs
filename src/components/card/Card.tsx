@@ -1,14 +1,12 @@
-import { Box, useStyleConfig } from '@chakra-ui/react';
-import { forwardRef, FC } from 'react'; // declaring props types for MDBox
+// import { Box, useStyleConfig} from '@chakra-ui/react';
 
-function Card(props: { variant: string; children: JSX.Element; [key: string]: any }) {
-	const { variant, children, ...rest } = props;
-	const styles = useStyleConfig('Card', { variant });
-	return (
-		<Box __css={styles} {...rest}>
-			{children}
-		</Box>
-	);
-}
+import { useStyleConfig, chakra, forwardRef } from '@chakra-ui/react';
+import { CustomCardProps } from 'theme/theme';
+const CustomCard = forwardRef<CustomCardProps, 'div'>((props, ref) => {
+	const { size, variant, ...rest } = props;
+	const styles = useStyleConfig('Card', { size, variant });
 
-export default CardTest;
+	return <chakra.div ref={ref} __css={styles} {...rest} />;
+});
+
+export default CustomCard;
