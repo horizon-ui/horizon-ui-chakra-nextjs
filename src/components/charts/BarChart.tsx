@@ -1,8 +1,17 @@
-import { Component } from 'react';
+import React from 'react';
 import Chart from 'react-apexcharts';
 
-class ColumnChart extends Component {
-	constructor(props) {
+type ChartProps = {
+	// using `interface` is also ok
+	[x: string]: any;
+};
+type ChartState = {
+	chartData: any[];
+	chartOptions: any;
+};
+
+class ColumnChart extends React.Component<ChartProps, ChartState> {
+	constructor(props: { chartData: any[]; chartOptions: any }) {
 		super(props);
 		this.state = {
 			chartData: [],
