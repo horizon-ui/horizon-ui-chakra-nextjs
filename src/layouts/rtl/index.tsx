@@ -11,7 +11,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import routes from 'routes';
 
 // Custom Chakra theme
-export default function Dashboard(props: any) {
+export default function Dashboard(props: { [x: string]: any }) {
 	const { ...rest } = props;
 	// states and functions
 	const [ fixed ] = useState(false);

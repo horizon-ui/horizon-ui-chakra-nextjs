@@ -24,11 +24,12 @@ function Sidebar(props: {
 	routes: {
 		name: string;
 		layout: string;
-		component: JSX.Element;
+		component: () => JSX.Element;
 		icon: JSX.Element;
 		secondary?: boolean;
 		path: string;
 	}[];
+	[x: string]: any;
 }) {
 	const { routes } = props;
 
@@ -67,7 +68,7 @@ export function SidebarResponsive(props: {
 	routes: {
 		name: string;
 		layout: string;
-		component: any;
+		component: () => JSX.Element;
 		icon: JSX.Element | string;
 		secondary?: boolean;
 		path: string;

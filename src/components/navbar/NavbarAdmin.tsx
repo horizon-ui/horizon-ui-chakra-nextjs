@@ -6,7 +6,7 @@ import AdminNavbarLinks from 'components/navbar/NavbarLinksAdmin';
 
 export default function AdminNavbar(props: {
 	secondary: boolean;
-	message: string;
+	message: string|boolean;
 	brandText: string;
 	logoText: string;
 	fixed: boolean;
