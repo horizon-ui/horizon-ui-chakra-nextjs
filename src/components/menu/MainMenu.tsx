@@ -21,7 +21,7 @@ import {
 	MdOutlineSettings
 } from 'react-icons/md';
 
-export default function Banner(props: any) {
+export default function Banner(props: { [x: string]: any }) {
 	const { ...rest } = props;
 
 	const textColor = useColorModeValue('secondaryGray.500', 'white');
@@ -42,7 +42,7 @@ export default function Banner(props: any) {
 	return (
 		<Menu isOpen={isOpen1} onClose={onClose1}>
 			<MenuButton
-				align='center'
+				alignItems='center'
 				justifyContent='center'
 				bg={bgButton}
 				_hover={bgHover}

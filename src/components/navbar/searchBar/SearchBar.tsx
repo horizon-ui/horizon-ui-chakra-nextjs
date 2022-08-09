@@ -6,10 +6,7 @@ export function SearchBar(props: {
 	children?: JSX.Element;
 	placeholder?: string;
 	borderRadius?: string | number;
-	mb?: any;
-	me?: any;
-	ms?: any;
-	mt?: any;
+	[x: string]: any;
 }) {
 	// Pass the computed styles into the `__css` prop
 	const { variant, background, children, placeholder, borderRadius, ...rest } = props;
