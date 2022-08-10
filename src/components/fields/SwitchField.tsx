@@ -3,13 +3,13 @@ import { Box, Flex, FormLabel, Switch, Text, useColorModeValue } from '@chakra-u
 // Custom components
 export default function Default(props: {
 	id: string;
-	label: string;
-	isChecked: boolean;
-	onChange: () => void;
-	desc: string;
-	textWidth: string | number;
-	reversed: boolean;
-	fontSize: any;
+	label?: string;
+	isChecked?: boolean;
+	onChange?: () => void;
+	desc?: string;
+	textWidth?: string | number;
+	reversed?: boolean;
+	[x: string]: any;
 }) {
 	const { id, label, isChecked, onChange, desc, textWidth, reversed, fontSize, ...rest } = props;
 	const textColorPrimary = useColorModeValue('secondaryGray.900', 'white');

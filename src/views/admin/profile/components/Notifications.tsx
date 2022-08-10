@@ -5,7 +5,7 @@ import Card from 'components/card/Card';
 import SwitchField from 'components/fields/SwitchField';
 import Menu from 'components/menu/MainMenu';
 
-export default function Notifications(props) {
+export default function Notifications(props: { [x: string]: any }) {
 	const { ...rest } = props;
 	// Chakra Color Mode
 	const textColorPrimary = useColorModeValue('secondaryGray.900', 'white');
