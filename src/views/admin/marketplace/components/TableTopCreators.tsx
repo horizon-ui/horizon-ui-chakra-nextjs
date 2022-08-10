@@ -21,7 +21,7 @@ import {
   useTable,
 } from "react-table";
 
-function TopCreatorTable(props) {
+function TopCreatorTable(props: { columnsData: any; tableData: any }) {
   const { columnsData, tableData } = props;
 
   const columns = useMemo(() => columnsData, [columnsData]);
@@ -91,7 +91,7 @@ function TopCreatorTable(props) {
               return (
                 <Tr {...row.getRowProps()} key={index}>
                   {row.cells.map((cell, index) => {
-                    let data = "";
+                    let data ;
                     if (cell.column.Header === "Name") {
                       data = (
                         <Flex align='center'>
