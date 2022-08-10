@@ -1,4 +1,3 @@
-declare module 'stylis-plugin-rtl' {
-	const noTypesYet: any;
-	export default noTypesYet;
-}
+import types from '@types/react-table';
+
+export default types;
