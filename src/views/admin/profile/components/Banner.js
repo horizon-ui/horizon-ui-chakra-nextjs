@@ -20,7 +20,7 @@ export default function Banner(props) {
 				{job}
 			</Text>
 			<Flex w='max-content' mx='auto' mt='26px'>
-				<Flex mx='auto' me='60px' align='center' direction='column'>
+				<Flex mx='auto' me='60px' alignItems='center' flexDirection='column'>
 					<Text color={textColorPrimary} fontSize='2xl' fontWeight='700'>
 						{posts}
 					</Text>
@@ -28,7 +28,7 @@ export default function Banner(props) {
 						Posts
 					</Text>
 				</Flex>
-				<Flex mx='auto' me='60px' align='center' direction='column'>
+				<Flex mx='auto' me='60px' alignItems='center' flexDirection='column'>
 					<Text color={textColorPrimary} fontSize='2xl' fontWeight='700'>
 						{followers}
 					</Text>
@@ -36,7 +36,7 @@ export default function Banner(props) {
 						Followers
 					</Text>
 				</Flex>
-				<Flex mx='auto' align='center' direction='column'>
+				<Flex mx='auto' alignItems='center' flexDirection='column'>
 					<Text color={textColorPrimary} fontSize='2xl' fontWeight='700'>
 						{following}
 					</Text>

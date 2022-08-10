@@ -103,6 +103,104 @@ export const barChartOptionsDailyTraffic: any = {
 	}
 };
 
+export const barChartDataUserActivity = [
+	{
+		name: 'PRODUCT A',
+		data: [ 70, 55, 41, 67, 22, 43 ]
+	},
+	{
+		name: 'PRODUCT B',
+		data: [ 90, 70, 60, 50, 80, 90 ]
+	}
+];
+
+// User Activity
+
+export const barChartOptionsUserActivity = {
+	chart: {
+		stacked: true,
+		toolbar: {
+			show: false
+		}
+	},
+	tooltip: {
+		style: {
+			fontSize: '12px'
+		},
+		onDatasetHover: {
+			style: {
+				fontSize: '12px'
+			}
+		},
+		theme: 'dark'
+	},
+	xaxis: {
+		categories: [ 'S', 'M', 'T', 'W', 'T', 'F' ],
+		show: false,
+		labels: {
+			show: true,
+			style: {
+				colors: '#A3AED0',
+				fontSize: '14px',
+				fontWeight: '500'
+			}
+		},
+		axisBorder: {
+			show: false
+		},
+		axisTicks: {
+			show: false
+		}
+	},
+	yaxis: {
+		show: true,
+		color: 'black',
+		labels: {
+			show: true,
+			style: {
+				colors: '#A3AED0',
+				fontSize: '14px',
+				fontWeight: '500'
+			}
+		}
+	},
+
+	grid: {
+		borderColor: 'rgba(163, 174, 208, 0.3)',
+		show: true,
+		yaxis: {
+			lines: {
+				show: true,
+				opacity: 0.5
+			}
+		},
+		row: {
+			opacity: 0.5
+		},
+		xaxis: {
+			lines: {
+				show: false
+			}
+		}
+	},
+	fill: {
+		type: 'solid',
+		colors: [ '#5E37FF', '#6AD2FF' ]
+	},
+	legend: {
+		show: false
+	},
+	colors: [ '#5E37FF', '#6AD2FF' ],
+	dataLabels: {
+		enabled: false
+	},
+	plotOptions: {
+		bar: {
+			borderRadius: 10,
+			columnWidth: '30px'
+		}
+	}
+};
 // Consumption Users Reports
 
 export const barChartDataConsumption = [

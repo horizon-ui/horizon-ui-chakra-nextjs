@@ -17,7 +17,7 @@ export default function DailyTraffic(props) {
 	// Chakra Color Mode
 	const textColor = useColorModeValue('secondaryGray.900', 'white');
 	return (
-		<Card align='center' direction='column' w='100%' {...rest}>
+		<Card alignItems='center' flexDirection='column' w='100%' {...rest}>
 			<Flex justify='space-between' align='start' px='10px' pt='5px'>
 				<Flex flexDirection='column' align='start' me='20px'>
 					<Text color='secondaryGray.600' fontSize='sm' fontWeight='500'>

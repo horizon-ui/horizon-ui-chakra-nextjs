@@ -17,7 +17,7 @@ export default function WeeklyRevenue(props) {
 	const bgHover = useColorModeValue({ bg: 'secondaryGray.400' }, { bg: 'whiteAlpha.50' });
 	const bgFocus = useColorModeValue({ bg: 'secondaryGray.300' }, { bg: 'whiteAlpha.100' });
 	return (
-		<Card align='center' direction='column' w='100%' {...rest}>
+		<Card alignItems='center' flexDirection='column' w='100%' {...rest}>
 			<Flex align='center' w='100%' px='15px' py='10px'>
 				<Text me='auto' color={textColor} fontSize='xl' fontWeight='700' lineHeight='100%'>
 					Weekly Revenue

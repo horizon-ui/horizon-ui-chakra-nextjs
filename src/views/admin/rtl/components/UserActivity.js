@@ -12,7 +12,7 @@ export default function UserActivity(props) {
 	// Chakra Color Mode
 	const textColor = useColorModeValue('secondaryGray.900', 'white');
 	return (
-		<Card align='center' direction='column' w='100%' {...rest}>
+		<Card alignItems='center' flexDirection='column' w='100%' {...rest}>
 			<Flex align='center' w='100%' px='15px' py='10px'>
 				<Text me='auto' color={textColor} fontSize='xl' fontWeight='700' lineHeight='100%'>
 					User Activity

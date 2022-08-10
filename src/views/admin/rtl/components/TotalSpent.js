@@ -23,7 +23,7 @@ export default function TotalSpent(props) {
 	const bgHover = useColorModeValue({ bg: 'secondaryGray.400' }, { bg: 'whiteAlpha.50' });
 	const bgFocus = useColorModeValue({ bg: 'secondaryGray.300' }, { bg: 'whiteAlpha.100' });
 	return (
-		<Card justifyContent='center' align='center' direction='column' w='100%' mb='0px' {...rest}>
+		<Card justifyContent='center' alignItems='center' flexDirection='column' w='100%' mb='0px' {...rest}>
 			<Flex justify='space-between' ps='0px' pe='20px' pt='5px'>
 				<Flex align='center' w='100%'>
 					<Button bg={boxBg} fontSize='sm' fontWeight='500' color={textColorSecondary} borderRadius='7px'>

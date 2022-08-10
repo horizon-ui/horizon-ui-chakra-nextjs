@@ -7,7 +7,7 @@ import React from 'react';
 import { barChartDataConsumption, barChartOptionsConsumption } from 'variables/charts';
 import { MdBarChart } from 'react-icons/md';
 
-export default function WeeklyRevenue(props) {
+export default function WeeklyRevenue(props: { [x: string]: any }) {
 	const { ...rest } = props;
 
 	// Chakra Color Mode
@@ -17,13 +17,13 @@ export default function WeeklyRevenue(props) {
 	const bgHover = useColorModeValue({ bg: 'secondaryGray.400' }, { bg: 'whiteAlpha.50' });
 	const bgFocus = useColorModeValue({ bg: 'secondaryGray.300' }, { bg: 'whiteAlpha.100' });
 	return (
-		<Card align='center' direction='column' w='100%' {...rest}>
+		<Card alignItems='center' flexDirection='column' w='100%' {...rest}>
 			<Flex align='center' w='100%' px='15px' py='10px'>
 				<Text me='auto' color={textColor} fontSize='xl' fontWeight='700' lineHeight='100%'>
 					Weekly Revenue
 				</Text>
 				<Button
-					align='center'
+					alignItems='center'
 					justifyContent='center'
 					bg={bgButton}
 					_hover={bgHover}

@@ -15,7 +15,7 @@ export default function Conversion(props) {
 	const cardColor = useColorModeValue('white', 'navy.700');
 	const cardShadow = useColorModeValue('0px 18px 40px rgba(112, 144, 176, 0.12)', 'unset');
 	return (
-		<Card p='20px' align='center' direction='column' w='100%' {...rest}>
+		<Card p='20px' alignItems='center' flexDirection='column' w='100%' {...rest}>
 			<Flex
 				px={{ base: '0px', '2xl': '10px' }}
 				justifyContent='space-between'
