@@ -6,7 +6,13 @@ import Card from 'components/card/Card';
 // Assets
 import { FaEthereum } from 'react-icons/fa';
 
-export default function NFT(props) {
+export default function NFT(props: {
+	image: string;
+	name: string;
+	author: string;
+	date: string;
+	price: string | number;
+}) {
 	const { image, name, author, date, price } = props;
 	// Chakra Color Mode
 	const textColor = useColorModeValue('brands.900', 'white');
