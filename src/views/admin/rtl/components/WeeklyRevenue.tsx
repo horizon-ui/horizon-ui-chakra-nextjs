@@ -3,11 +3,10 @@ import { Box, Button, Flex, Icon, Text, useColorModeValue } from '@chakra-ui/rea
 import Card from 'components/card/Card';
 // Custom components
 import BarChart from 'components/charts/BarChart';
-import React from 'react';
 import { barChartDataConsumption, barChartOptionsConsumption } from 'variables/charts';
 import { MdBarChart } from 'react-icons/md';
 
-export default function WeeklyRevenue(props) {
+export default function WeeklyRevenue(props: { [x: string]: any }) {
 	const { ...rest } = props;
 
 	// Chakra Color Mode
@@ -23,7 +22,7 @@ export default function WeeklyRevenue(props) {
 					Weekly Revenue
 				</Text>
 				<Button
-					align='center'
+					alignItems='center'
 					justifyContent='center'
 					bg={bgButton}
 					_hover={bgHover}

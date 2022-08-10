@@ -7,9 +7,8 @@ import IconBox from 'components/icons/IconBox';
 
 // Assets
 import { MdCheckBox, MdDragIndicator } from 'react-icons/md';
-import React from 'react';
 
-export default function Conversion(props) {
+export default function Conversion(props: { [x: string]: any }) {
 	const { ...rest } = props;
 
 	// Chakra Color Mode

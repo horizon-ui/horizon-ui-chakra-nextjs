@@ -3,10 +3,9 @@ import { Box, Flex, Select, Text, useColorModeValue } from '@chakra-ui/react';
 import Card from 'components/card/Card';
 // Custom components
 import BarChart from 'components/charts/BarChart';
-import React from 'react';
 import { barChartDataUserActivity, barChartOptionsUserActivity } from 'variables/charts';
 
-export default function UserActivity(props) {
+export default function UserActivity(props: { [x: string]: any }) {
 	const { ...rest } = props;
 
 	// Chakra Color Mode

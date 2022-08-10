@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Chakra imports
 import { Box, Flex, Icon, Text, useColorModeValue } from '@chakra-ui/react';
 import BarChart from 'components/charts/BarChart';
@@ -11,7 +9,7 @@ import { barChartDataDailyTraffic, barChartOptionsDailyTraffic } from 'variables
 // Assets
 import { RiArrowUpSFill } from 'react-icons/ri';
 
-export default function DailyTraffic(props) {
+export default function DailyTraffic(props: { [x: string]: any }) {
 	const { ...rest } = props;
 
 	// Chakra Color Mode

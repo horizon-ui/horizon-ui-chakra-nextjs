@@ -3,14 +3,13 @@ import { Box, Button, Flex, Icon, Text, useColorModeValue } from '@chakra-ui/rea
 // Custom components
 import Card from 'components/card/Card';
 import LineChart from 'components/charts/LineChart';
-import React from 'react';
 import { IoCheckmarkCircle } from 'react-icons/io5';
 import { MdBarChart, MdOutlineCalendarToday } from 'react-icons/md';
 // Assets
 import { RiArrowUpSFill } from 'react-icons/ri';
 import { lineChartDataTotalSpent, lineChartOptionsTotalSpent } from 'variables/charts';
 
-export default function TotalSpent(props) {
+export default function TotalSpent(props: { [x: string]: any }) {
 	const { ...rest } = props;
 
 	// Chakra Color Mode
@@ -32,7 +31,7 @@ export default function TotalSpent(props) {
 					</Button>
 					<Button
 						ms='auto'
-						align='center'
+						alignItems='center'
 						justifyContent='center'
 						bg={bgButton}
 						_hover={bgHover}
