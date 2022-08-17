@@ -55,7 +55,6 @@
   "devDependencies": {
     "@types/react": "^18.0.17",
     "@types/react-calendar": "^3.5.2",
-    "@types/react-router-dom": "^5.3.3",
     "@types/react-table": "^7.7.12",
     "@types/node": "^18.7.6",
     "gh-pages": "^3.2.3"

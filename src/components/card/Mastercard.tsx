@@ -4,7 +4,7 @@ import { Flex, Box, Icon, Text, Spacer } from '@chakra-ui/react';
 import Card from 'components/card/Card';
 
 // Assets
-import bgMastercard from 'assets/img/dashboards/Debit.png';
+import bgMastercard from '/img/dashboards/Debit.png';
 import { RiMastercardFill } from 'react-icons/ri';
 
 export default function Banner(props: { exp: string; cvv: string; number: string }) {
