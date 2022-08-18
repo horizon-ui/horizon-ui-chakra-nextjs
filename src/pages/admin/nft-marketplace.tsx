@@ -94,28 +94,28 @@ export default function NftMarketplacd () {
                   color={textColorBrand}
                   fontWeight='500'
                   me={{ base: '34px', md: '44px' }}
-                  to='#art'
+                  href='#art'
                 >
-                  Art
+                  <a>Art</a>
                 </Link>
                 <Link
                   color={textColorBrand}
                   fontWeight='500'
                   me={{ base: '34px', md: '44px' }}
-                  to='#music'
+                  href='#music'
                 >
-                  Music
+                  <a>Music</a>
                 </Link>
                 <Link
                   color={textColorBrand}
                   fontWeight='500'
                   me={{ base: '34px', md: '44px' }}
-                  to='#collectibles'
+                  href='#collectibles'
                 >
-                  Collectibles
+                  <a>Collectibles</a>
                 </Link>
-                <Link color={textColorBrand} fontWeight='500' to='#sports'>
-                  Sports
+                <Link color={textColorBrand} fontWeight='500' href='#sports'>
+                  <a>Sports</a>
                 </Link>
               </Flex>
             </Flex>

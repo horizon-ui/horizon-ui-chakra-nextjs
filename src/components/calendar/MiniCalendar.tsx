@@ -7,7 +7,7 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 import Card from 'components/card/Card'
 
 import 'react-calendar/dist/Calendar.css'
-import 'styles/MiniCalendar.css'
+// import 'styles/MiniCalendar.css'
 
 export default function MiniCalendar (props: {
   selectRange: boolean

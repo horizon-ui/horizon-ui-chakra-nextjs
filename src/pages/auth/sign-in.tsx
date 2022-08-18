@@ -22,7 +22,6 @@
 */
 
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 // Chakra imports
 import {
   Box,
@@ -43,10 +42,11 @@ import {
 import { HSeparator } from 'components/separator/Separator'
 import DefaultAuth from 'layouts/auth/Default'
 // Assets
-import illustration from '/img/auth/auth.png'
+import Link from 'next/link'
 import { FcGoogle } from 'react-icons/fc'
 import { MdOutlineRemoveRedEye } from 'react-icons/md'
 import { RiEyeCloseLine } from 'react-icons/ri'
+import illustration from '/img/auth/auth.png'
 
 export default function SignIn () {
   // Chakra color mode
@@ -68,7 +68,7 @@ export default function SignIn () {
   const [show, setShow] = React.useState(false)
   const handleClick = () => setShow(!show)
   return (
-    <DefaultAuth illustrationBackground={illustration} image={illustration}>
+    <DefaultAuth illustrationBackground={illustration}>
       <Flex
         maxW={{ base: '100%', md: 'max-content' }}
         w='100%'
@@ -198,16 +198,18 @@ export default function SignIn () {
                   Keep me logged in
                 </FormLabel>
               </FormControl>
-              <NavLink to='/auth/forgot-password'>
-                <Text
-                  color={textColorBrand}
-                  fontSize='sm'
-                  w='124px'
-                  fontWeight='500'
-                >
-                  Forgot password?
-                </Text>
-              </NavLink>
+              <Link href='/auth/forgot-password'>
+                <a>
+                  <Text
+                    color={textColorBrand}
+                    fontSize='sm'
+                    w='124px'
+                    fontWeight='500'
+                  >
+                    Forgot password?
+                  </Text>
+                </a>
+              </Link>
             </Flex>
             <Button
               fontSize='sm'
@@ -229,16 +231,18 @@ export default function SignIn () {
           >
             <Text color={textColorDetails} fontWeight='400' fontSize='14px'>
               Not registered yet?
-              <NavLink to='/auth/sign-up'>
-                <Text
-                  color={textColorBrand}
-                  as='span'
-                  ms='5px'
-                  fontWeight='500'
-                >
-                  Create an Account
-                </Text>
-              </NavLink>
+              <Link href='/auth/sign-up'>
+                <a>
+                  <Text
+                    color={textColorBrand}
+                    as='span'
+                    ms='5px'
+                    fontWeight='500'
+                  >
+                    Create an Account
+                  </Text>
+                </a>
+              </Link>
             </Text>
           </Flex>
         </Flex>

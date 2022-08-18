@@ -1,79 +1,46 @@
-import { useState } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
-import routes from 'routes';
+import { PropsWithChildren, useState } from 'react'
+import routes from 'routes'
 
 // Chakra imports
-import { Box, useColorModeValue } from '@chakra-ui/react';
+import { Box, useColorModeValue } from '@chakra-ui/react'
 
 // Layout components
-import { SidebarContext } from 'contexts/SidebarContext';
+import { SidebarContext } from 'contexts/SidebarContext'
+
+interface AuthLayuoutProps extends PropsWithChildren {}
 
 // Custom Chakra theme
-export default function Auth() {
-	// states and functions
-	const [ toggleSidebar, setToggleSidebar ] = useState(false); 
-	const getRoute = () => {
-		return window.location.pathname !== '/auth/full-screen-maps';
-	};
-	const getRoutes = (
-		routes: {
-			name: string;
-			layout: string;
-			component: any;
-			secondary?: boolean;
-			path: string;
-		}[]
-	): any => {
-		return routes.map(
-			(
-				prop: {
-					name: string;
-					layout: string;
-					component: any;
-					secondary?: boolean;
-					path: string;
-				},
-				key: any
-			) => {
-				if (prop.layout === '/auth') {
-					return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
-				} else {
-					return null;
-				}
-			}
-		);
-	};
-	const authBg = useColorModeValue('white', 'navy.900');
-	document.documentElement.dir = 'ltr';
-	return (
-		<Box>
-			<SidebarContext.Provider
-				value={{
-					toggleSidebar,
-					setToggleSidebar
-				}}>
-				<Box
-					bg={authBg}
-					float='right'
-					minHeight='100vh'
-					height='100%'
-					position='relative'
-					w='100%'
-					transition='all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)'
-					transitionDuration='.2s, .2s, .35s'
-					transitionProperty='top, bottom, width'
-					transitionTimingFunction='linear, linear, ease'>
-					{getRoute() ? (
-						<Box mx='auto' minH='100vh'>
-							<Switch>
-								{getRoutes(routes)}
-								<Redirect from='/auth' to='/auth/sign-in/default
-                  ' />
-							</Switch>
-						</Box>
-					) : null}
-				</Box>
-			</SidebarContext.Provider>
-		</Box>
-	);
+export default function Auth ({ children }: AuthLayuoutProps) {
+  const [toggleSidebar, setToggleSidebar] = useState(false)
+  const authBg = useColorModeValue('white', 'navy.900')
+
+  document.documentElement.dir = 'ltr'
+
+  return (
+    <Box>
+      <SidebarContext.Provider
+        value={{
+          toggleSidebar,
+          setToggleSidebar
+        }}
+      >
+        <Box
+          bg={authBg}
+          float='right'
+          minHeight='100vh'
+          height='100%'
+          position='relative'
+          w='100%'
+          transition='all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)'
+          transitionDuration='.2s, .2s, .35s'
+          transitionProperty='top, bottom, width'
+          transitionTimingFunction='linear, linear, ease'
+        >
+          <Box mx='auto' minH='100vh'>
+            {children}
+          </Box>
+        </Box>
+      </SidebarContext.Provider>
+    </Box>
+  )
 }
