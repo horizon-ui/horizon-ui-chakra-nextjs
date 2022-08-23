@@ -4,7 +4,6 @@ import {
   Button,
   Flex,
   Icon,
-  Image,
   Link,
   Menu,
   MenuButton,
@@ -26,6 +25,7 @@ import { MdNotificationsNone, MdInfoOutline } from 'react-icons/md'
 import { IoMdMoon, IoMdSunny } from 'react-icons/io'
 import { FaEthereum } from 'react-icons/fa'
 import routes from 'routes'
+import { Image } from 'components/image/Image'
 export default function HeaderLinks (props: { secondary: boolean }) {
   const { secondary } = props
   const { colorMode, toggleColorMode } = useColorMode()
