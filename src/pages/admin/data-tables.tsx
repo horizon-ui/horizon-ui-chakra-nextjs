@@ -15,6 +15,7 @@ import tableDataColumns from 'views/admin/dataTables/variables/tableDataColumns.
 import tableDataComplex from 'views/admin/dataTables/variables/tableDataComplex.json'
 import React from 'react'
 import AdminLayout from 'layouts/admin'
+import { TableData } from 'views/admin/default/variables/columnsData'
 
 export default function DataTables () {
   return (
@@ -27,19 +28,19 @@ export default function DataTables () {
         >
           <DevelopmentTable
             columnsData={columnsDataDevelopment}
-            tableData={tableDataDevelopment}
+            tableData={(tableDataDevelopment as unknown) as TableData[]}
           />
           <CheckTable
             columnsData={columnsDataCheck}
-            tableData={tableDataCheck}
+            tableData={(tableDataCheck as unknown) as TableData[]}
           />
           <ColumnsTable
             columnsData={columnsDataColumns}
-            tableData={tableDataColumns}
+            tableData={(tableDataColumns as unknown) as TableData[]}
           />
           <ComplexTable
             columnsData={columnsDataComplex}
-            tableData={tableDataComplex}
+            tableData={(tableDataComplex as unknown) as TableData[]}
           />
         </SimpleGrid>
       </Box>

@@ -40,14 +40,17 @@ export const columnsDataComplex = [
 
 export type ColumnData = Column[];
 
-export type TableData = readonly Column<{
+export type TableData = Column<{
   name: (string | boolean)[];
-  quantity: number;
   date: string;
   progress: number;
-}>[];
+  quantity?: number;
+  status?: string;
+  artworks?: string;
+  rating?: number;
+}>;
 
 export type TableProps = {
   columnsData: ColumnData;
-  tableData: TableData;
+  tableData: TableData[];
 };

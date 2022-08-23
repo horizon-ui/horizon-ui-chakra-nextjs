@@ -51,7 +51,8 @@ import TotalSpent from 'views/admin/default/components/TotalSpent'
 import WeeklyRevenue from 'views/admin/default/components/WeeklyRevenue'
 import {
   columnsDataCheck,
-  columnsDataComplex
+  columnsDataComplex,
+  TableData
 } from 'views/admin/default/variables/columnsData'
 import tableDataCheck from 'views/admin/default/variables/tableDataCheck.json'
 import tableDataComplex from 'views/admin/default/variables/tableDataComplex.json'
@@ -185,7 +186,7 @@ export default function UserReports () {
             >
               <CheckTable
                 columnsData={columnsDataCheck}
-                tableData={tableDataCheck}
+                tableData={(tableDataCheck as unknown) as TableData[]}
               />
               <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
                 <DailyTraffic />
@@ -199,7 +200,7 @@ export default function UserReports () {
             >
               <ComplexTable
                 columnsData={columnsDataComplex}
-                tableData={tableDataComplex}
+                tableData={(tableDataComplex as unknown) as TableData[]}
               />
               <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
                 <Tasks />

@@ -55,6 +55,7 @@ import Avatar4 from '/img/avatars/avatar4.png'
 import tableDataTopCreators from 'views/admin/marketplace/variables/tableDataTopCreators.json'
 import { tableColumnsTopCreators } from 'views/admin/marketplace/variables/tableColumnsTopCreators'
 import AdminLayout from 'layouts/admin'
+import { TableData } from 'views/admin/default/variables/columnsData'
 
 export default function NftMarketplacd () {
   // Chakra Color Mode
@@ -254,7 +255,7 @@ export default function NftMarketplacd () {
           >
             <Card px='0px' mb='20px'>
               <TableTopCreators
-                tableData={tableDataTopCreators}
+                tableData={(tableDataTopCreators as unknown) as TableData[]}
                 columnsData={tableColumnsTopCreators}
               />
             </Card>
