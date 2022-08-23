@@ -1,4 +1,11 @@
-export const columnsDataDevelopment = [
+interface IColumnHeader {
+  Header: string;
+  accessor: string;
+}
+
+type Columns = IColumnHeader[];
+
+export const columnsDataDevelopment: Columns = [
   {
     Header: "NAME",
     accessor: "name",
@@ -17,7 +24,7 @@ export const columnsDataDevelopment = [
   },
 ];
 
-export const columnsDataCheck = [
+export const columnsDataCheck: Columns = [
   {
     Header: "NAME",
     accessor: "name",
@@ -36,7 +43,7 @@ export const columnsDataCheck = [
   },
 ];
 
-export const columnsDataColumns = [
+export const columnsDataColumns: Columns = [
   {
     Header: "NAME",
     accessor: "name",
@@ -55,7 +62,7 @@ export const columnsDataColumns = [
   },
 ];
 
-export const columnsDataComplex = [
+export const columnsDataComplex: Columns = [
   {
     Header: "NAME",
     accessor: "name",
