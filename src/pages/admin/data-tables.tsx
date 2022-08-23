@@ -14,29 +14,35 @@ import tableDataCheck from 'views/admin/dataTables/variables/tableDataCheck.json
 import tableDataColumns from 'views/admin/dataTables/variables/tableDataColumns.json'
 import tableDataComplex from 'views/admin/dataTables/variables/tableDataComplex.json'
 import React from 'react'
+import AdminLayout from 'layouts/admin'
 
 export default function DataTables () {
   return (
-    <Box pt={{ base: '130px', md: '80px', xl: '80px' }}>
-      <SimpleGrid
-        mb='20px'
-        columns={{ sm: 1, md: 2 }}
-        spacing={{ base: '20px', xl: '20px' }}
-      >
-        <DevelopmentTable
-          columnsData={columnsDataDevelopment}
-          tableData={tableDataDevelopment}
-        />
-        <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
-        <ColumnsTable
-          columnsData={columnsDataColumns}
-          tableData={tableDataColumns}
-        />
-        <ComplexTable
-          columnsData={columnsDataComplex}
-          tableData={tableDataComplex}
-        />
-      </SimpleGrid>
-    </Box>
+    <AdminLayout>
+      <Box pt={{ base: '130px', md: '80px', xl: '80px' }}>
+        <SimpleGrid
+          mb='20px'
+          columns={{ sm: 1, md: 2 }}
+          spacing={{ base: '20px', xl: '20px' }}
+        >
+          <DevelopmentTable
+            columnsData={columnsDataDevelopment}
+            tableData={tableDataDevelopment}
+          />
+          <CheckTable
+            columnsData={columnsDataCheck}
+            tableData={tableDataCheck}
+          />
+          <ColumnsTable
+            columnsData={columnsDataColumns}
+            tableData={tableDataColumns}
+          />
+          <ComplexTable
+            columnsData={columnsDataComplex}
+            tableData={tableDataComplex}
+          />
+        </SimpleGrid>
+      </Box>
+    </AdminLayout>
   )
 }

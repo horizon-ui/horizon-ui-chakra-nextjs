@@ -16,12 +16,12 @@ export const findCurrentRoute = (routes: IRoute[]): IRoute => {
 
 export const getActiveRoute = (routes: IRoute[]): string => {
   const route = findCurrentRoute(routes);
-  return route.name || "Default Brand Text";
+  return route?.name || "Default Brand Text";
 };
 
 export const getActiveNavbar = (routes: IRoute[]): boolean => {
   const route = findCurrentRoute(routes);
-  return route.secondary;
+  return route?.secondary;
 };
 
 export const getActiveNavbarText = (routes: IRoute[]): string | boolean => {

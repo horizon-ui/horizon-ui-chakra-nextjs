@@ -24,6 +24,7 @@ import { Scrollbars } from 'react-custom-scrollbars-2'
 // Assets
 import { IoMenuOutline } from 'react-icons/io5'
 import { IRoute } from 'types/navigation'
+import { isWindowAvailable } from 'utils/navigation'
 
 interface SidebarResponsiveProps {
   routes: IRoute[]
@@ -100,7 +101,11 @@ export function SidebarResponsive (props: SidebarResponsiveProps) {
       <Drawer
         isOpen={isOpen}
         onClose={onClose}
-        placement={document.documentElement.dir === 'rtl' ? 'right' : 'left'}
+        placement={
+          isWindowAvailable() && window.document.documentElement.dir === 'rtl'
+            ? 'right'
+            : 'left'
+        }
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />

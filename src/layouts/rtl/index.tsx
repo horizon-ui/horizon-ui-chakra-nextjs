@@ -6,12 +6,13 @@ import Navbar from 'components/navbar/NavbarRTL'
 import Sidebar from 'components/sidebar/Sidebar'
 import { RtlProvider } from 'components/rtlProvider/RtlProvider'
 import { SidebarContext } from 'contexts/SidebarContext'
-import { PropsWithChildren, useState } from 'react'
+import { PropsWithChildren, useEffect, useState } from 'react'
 import routes from 'routes'
 import {
   getActiveNavbar,
   getActiveNavbarText,
-  getActiveRoute
+  getActiveRoute,
+  isWindowAvailable
 } from 'utils/navigation'
 
 interface RTLLayoutProps extends PropsWithChildren {}
@@ -22,7 +23,11 @@ export default function RTLLayout (props: RTLLayoutProps) {
   const [fixed] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
 
-  document.documentElement.dir = 'rtl'
+  useEffect(() => {
+    if (!isWindowAvailable()) return
+    window.document.documentElement.dir = 'rtl'
+  })
+
   const { onOpen } = useDisclosure()
   return (
     <RtlProvider>
