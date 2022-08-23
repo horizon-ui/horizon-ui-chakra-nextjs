@@ -3,6 +3,7 @@ import { AppProps } from 'next/app'
 import React from 'react'
 import theme from 'theme/theme'
 
+import 'styles/Fonts.css'
 import 'styles/App.css'
 import 'styles/Contact.css'
 
