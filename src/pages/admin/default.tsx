@@ -31,7 +31,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 // Assets
-import Usa from '/img/dashboards/usa.png'
+import Usa from 'img/dashboards/usa.png'
 // Custom components
 import MiniCalendar from 'components/calendar/MiniCalendar'
 import MiniStatistics from 'components/card/MiniStatistics'
@@ -58,6 +58,7 @@ import tableDataCheck from 'views/admin/default/variables/tableDataCheck.json'
 import tableDataComplex from 'views/admin/default/variables/tableDataComplex.json'
 import { isWindowAvailable } from 'utils/navigation'
 import AdminLayout from 'layouts/admin'
+import { Image } from 'components/image/Image'
 
 export default function UserReports () {
   // Chakra Color Mode
@@ -118,7 +119,9 @@ export default function UserReports () {
                 endContent={
                   <Flex me='-16px' mt='10px'>
                     <FormLabel htmlFor='balance'>
-                      <Avatar src={Usa} />
+                      <Box boxSize={'12'}>
+                        <Image src={Usa} />
+                      </Box>
                     </FormLabel>
                     <Select
                       id='balance'

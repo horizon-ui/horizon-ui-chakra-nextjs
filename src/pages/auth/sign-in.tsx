@@ -46,7 +46,7 @@ import Link from 'next/link'
 import { FcGoogle } from 'react-icons/fc'
 import { MdOutlineRemoveRedEye } from 'react-icons/md'
 import { RiEyeCloseLine } from 'react-icons/ri'
-import illustration from '/img/auth/auth.png'
+import illustration from 'img/auth/auth.png'
 
 export default function SignIn () {
   // Chakra color mode

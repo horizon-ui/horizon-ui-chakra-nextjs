@@ -42,7 +42,7 @@ import {
 import { HSeparator } from 'components/separator/Separator'
 import DefaultAuth from 'layouts/auth/Default'
 // Assets
-import illustration from '/img/auth/auth.png'
+import illustration from 'img/auth/auth.png'
 import { FcGoogle } from 'react-icons/fc'
 import { MdOutlineRemoveRedEye } from 'react-icons/md'
 import { RiEyeCloseLine } from 'react-icons/ri'

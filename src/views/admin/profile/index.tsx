@@ -32,8 +32,8 @@ import Storage from 'views/admin/profile/components/Storage'
 import Upload from 'views/admin/profile/components/Upload'
 
 // Assets
-import banner from '/img/auth/banner.png'
-import avatar from '/img/avatars/avatar4.png'
+import banner from 'img/auth/banner.png'
+import avatar from 'img/avatars/avatar4.png'
 
 export default function Overview () {
   return (
