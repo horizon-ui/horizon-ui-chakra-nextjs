@@ -1,38 +1,21 @@
 import dynamic from 'next/dist/shared/lib/dynamic'
-import React from 'react'
-import { isWindowAvailable } from 'utils/navigation'
-import { ChartProps, ChartState } from './LineAreaChart'
+import { ChartProps } from './LineAreaChart'
+
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
-class LineChart extends React.Component<ChartProps, ChartState> {
-  state: ChartState = {
-    chartData: [],
-    chartOptions: {}
-  }
+interface LineChartProps extends ChartProps {}
 
-  constructor (props: ChartProps) {
-    super(props)
-  }
-
-  componentDidMount () {
-    this.setState({
-      chartData: this.props.chartData,
-      chartOptions: this.props.chartOptions
-    })
-  }
-
-  render () {
-    if (!isWindowAvailable()) return <></>
-    return (
-      <Chart
-        options={this.state.chartOptions}
-        series={this.state.chartData}
-        type='line'
-        width='100%'
-        height='100%'
-      />
-    )
-  }
+export default function LineChart ({
+  chartOptions,
+  chartData
+}: LineChartProps) {
+  return (
+    <Chart
+      options={chartOptions}
+      series={chartData}
+      type='line'
+      width='100%'
+      height='100%'
+    />
+  )
 }
-
-export default LineChart

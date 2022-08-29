@@ -1,17 +1,12 @@
+import { Box } from '@chakra-ui/react'
+import * as React from 'react'
 import NextImage from 'next/image'
-import { chakra } from '@chakra-ui/react'
 
-export const Image = chakra(NextImage, {
-  baseStyle: { maxH: 120, maxW: 120 },
-  shouldForwardProp: prop =>
-    [
-      'width',
-      'height',
-      'src',
-      'alt',
-      'quality',
-      'placeholder',
-      'blurDataURL',
-      'loader '
-    ].includes(prop)
-})
+export const Image = props => {
+  const { src, alt, ...rest } = props
+  return (
+    <Box position='relative' {...rest}>
+      <NextImage objectFit='cover' layout='fill' src={src} alt={alt} />
+    </Box>
+  )
+}

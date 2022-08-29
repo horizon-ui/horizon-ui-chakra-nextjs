@@ -362,7 +362,7 @@ export const lineChartDataTotalSpent = [
   },
 ];
 
-export const lineChartOptionsTotalSpent: ApexGeneric = {
+export const lineChartOptionsTotalSpent: ApexOptions = {
   chart: {
     toolbar: {
       show: false,
@@ -400,10 +400,10 @@ export const lineChartOptionsTotalSpent: ApexGeneric = {
   },
   stroke: {
     curve: "smooth",
-    type: "line",
+    // type: "line",
   },
   xaxis: {
-    type: "numeric",
+    // type: "numeric",
     categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB"],
     labels: {
       style: {
@@ -428,9 +428,9 @@ export const lineChartOptionsTotalSpent: ApexGeneric = {
   grid: {
     show: false,
     column: {
-      color: ["#7551FF", "#39B8FF"],
+      // color: ["#7551FF", "#39B8FF"],
       opacity: 0.5,
     },
   },
-  color: ["#7551FF", "#39B8FF"],
+  // color: ["#7551FF", "#39B8FF"],
 };
