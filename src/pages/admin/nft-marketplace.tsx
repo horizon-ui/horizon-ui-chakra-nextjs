@@ -28,10 +28,10 @@ import {
   Button,
   Flex,
   Grid,
-  Link,
   Text,
   useColorModeValue,
-  SimpleGrid
+  SimpleGrid,
+  Link
 } from '@chakra-ui/react'
 
 // Custom components
@@ -56,8 +56,9 @@ import tableDataTopCreators from 'views/admin/marketplace/variables/tableDataTop
 import { tableColumnsTopCreators } from 'views/admin/marketplace/variables/tableColumnsTopCreators'
 import AdminLayout from 'layouts/admin'
 import { TableData } from 'views/admin/default/variables/columnsData'
+import NextLink from 'next/link'
 
-export default function NftMarketplacd () {
+export default function NftMarketplace () {
   // Chakra Color Mode
   const textColor = useColorModeValue('secondaryGray.900', 'white')
   const textColorBrand = useColorModeValue('brand.500', 'white')
@@ -98,33 +99,38 @@ export default function NftMarketplacd () {
                   ms={{ base: '24px', md: '0px' }}
                   mt={{ base: '20px', md: '0px' }}
                 >
-                  <Link
-                    color={textColorBrand}
-                    fontWeight='500'
-                    me={{ base: '34px', md: '44px' }}
-                    href='#art'
-                  >
-                    <a>Art</a>
-                  </Link>
-                  <Link
-                    color={textColorBrand}
-                    fontWeight='500'
-                    me={{ base: '34px', md: '44px' }}
-                    href='#music'
-                  >
-                    <a>Music</a>
-                  </Link>
-                  <Link
-                    color={textColorBrand}
-                    fontWeight='500'
-                    me={{ base: '34px', md: '44px' }}
-                    href='#collectibles'
-                  >
-                    <a>Collectibles</a>
-                  </Link>
-                  <Link color={textColorBrand} fontWeight='500' href='#sports'>
-                    <a>Sports</a>
-                  </Link>
+                  <NextLink href='#art' passHref>
+                    <Link
+                      color={textColorBrand}
+                      fontWeight='500'
+                      me={{ base: '34px', md: '44px' }}
+                    >
+                      Art
+                    </Link>
+                  </NextLink>
+                  <NextLink href='#music' passHref>
+                    <Link
+                      color={textColorBrand}
+                      fontWeight='500'
+                      me={{ base: '34px', md: '44px' }}
+                    >
+                      Music
+                    </Link>
+                  </NextLink>
+                  <NextLink href='#collectibles' passHref>
+                    <Link
+                      color={textColorBrand}
+                      fontWeight='500'
+                      me={{ base: '34px', md: '44px' }}
+                    >
+                      Collectibles
+                    </Link>
+                  </NextLink>
+                  <NextLink href='#sports' passHref>
+                    <Link color={textColorBrand} fontWeight='500'>
+                      Sports
+                    </Link>
+                  </NextLink>
                 </Flex>
               </Flex>
               <SimpleGrid columns={{ base: 1, md: 3 }} gap='20px'>
