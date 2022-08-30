@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react'
 // Custom components
 import Card from 'components/card/Card'
-import { AvatarWithBorder, ChakraNextAvatar } from 'components/image/Avatar'
+import { NextAvatar } from 'components/image/Avatar'
 import { Image } from 'components/image/Image'
 // Assets
 import { useState } from 'react'
@@ -118,7 +118,7 @@ export default function NFT (props: {
               fontSize='12px'
             >
               {bidders.map((avt, key) => (
-                <AvatarWithBorder key={key} h={'32px'} w={'32px'} src={avt} />
+                <NextAvatar key={key} h={'32px'} w={'32px'} src={avt} />
               ))}
             </AvatarGroup>
           </Flex>
