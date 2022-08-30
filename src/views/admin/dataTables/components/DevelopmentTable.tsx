@@ -15,7 +15,7 @@ import {
 import Card from 'components/card/Card'
 import { AndroidLogo, AppleLogo, WindowsLogo } from 'components/icons/Icons'
 import Menu from 'components/menu/MainMenu'
-import React, { useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import {
   useGlobalFilter,
   usePagination,
@@ -53,6 +53,16 @@ export default function DevelopmentTable (props: TableProps) {
   const textColor = useColorModeValue('secondaryGray.900', 'white')
   const iconColor = useColorModeValue('secondaryGray.500', 'white')
   const borderColor = useColorModeValue('gray.200', 'whiteAlpha.100')
+
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    if (isMounted) return
+    setIsMounted(true)
+  }, [isMounted])
+
+  if (!isMounted) return <></>
+
   return (
     <Card
       flexDirection='column'
