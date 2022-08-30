@@ -9,7 +9,8 @@ import {
   Link,
   Text,
   useColorModeValue,
-  Spacer
+  Spacer,
+  AspectRatio
 } from '@chakra-ui/react'
 // Custom components
 import Card from 'components/card/Card'
@@ -35,14 +36,9 @@ export default function NFT (props: {
     <Card p='20px'>
       <Flex direction={{ base: 'column' }} justify='center'>
         <Box mb={{ base: '20px', '2xl': '20px' }} position='relative'>
-          <Image
-            flex='1'
-            src={image}
-            w={{ base: '100%', '3xl': '100%' }}
-            h={'200px'}
-            borderRadius='20px'
-            alt=''
-          />
+          <AspectRatio ratio={7 / 5}>
+            <Image src={image} w={'100%'} borderRadius='20px' alt='' />
+          </AspectRatio>
           <Button
             position='absolute'
             bg='white'

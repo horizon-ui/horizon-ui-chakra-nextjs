@@ -60,7 +60,7 @@ export default function TotalSpent (props: { [x: string]: any }) {
       mb='0px'
       {...rest}
     >
-      <Flex justify='space-between' ps='0px' pe='20px' pt='5px'>
+      <Flex justify='space-between' ps='0px' pe='20px' pt='5px' w='100%'>
         <Flex align='center' w='100%'>
           <Button
             bg={boxBg}
