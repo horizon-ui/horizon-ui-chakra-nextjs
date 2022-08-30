@@ -1,0 +1,11 @@
+.image {
+  border-radius: 50%;
+}
+
+.light {
+  border-color: var(--chakra-colors-dark);
+}
+
+.dark {
+  border-color: var(--chakra-colors-white);
+}

@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react'
 // Custom components
 import Card from 'components/card/Card'
+import { AvatarWithBorder, ChakraNextAvatar } from 'components/image/Avatar'
 import { Image } from 'components/image/Image'
 // Assets
 import { useState } from 'react'
@@ -40,6 +41,7 @@ export default function NFT (props: {
             w={{ base: '100%', '3xl': '100%' }}
             h={'200px'}
             borderRadius='20px'
+            alt=''
           />
           <Button
             position='absolute'
@@ -120,7 +122,7 @@ export default function NFT (props: {
               fontSize='12px'
             >
               {bidders.map((avt, key) => (
-                <Avatar key={key} src={avt} />
+                <AvatarWithBorder key={key} h={'32px'} w={'32px'} src={avt} />
               ))}
             </AvatarGroup>
           </Flex>
