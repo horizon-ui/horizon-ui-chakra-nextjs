@@ -110,7 +110,7 @@ export default function RTLDashboard () {
             endContent={
               <Flex me='-16px' mt='10px'>
                 <FormLabel htmlFor='balance'>
-                  <Avatar src={Usa} />
+                  <Avatar src={Usa} w={'100%'} h={'100%'} />
                 </FormLabel>
                 <Select
                   id='balance'
