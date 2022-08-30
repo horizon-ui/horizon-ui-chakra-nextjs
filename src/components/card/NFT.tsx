@@ -8,7 +8,8 @@ import {
   Icon,
   Link,
   Text,
-  useColorModeValue
+  useColorModeValue,
+  Spacer
 } from '@chakra-ui/react'
 // Custom components
 import Card from 'components/card/Card'
@@ -34,9 +35,10 @@ export default function NFT (props: {
       <Flex direction={{ base: 'column' }} justify='center'>
         <Box mb={{ base: '20px', '2xl': '20px' }} position='relative'>
           <Image
+            flex='1'
             src={image}
             w={{ base: '100%', '3xl': '100%' }}
-            h={{ base: '100%', '3xl': '100%' }}
+            h={'200px'}
             borderRadius='20px'
           />
           <Button

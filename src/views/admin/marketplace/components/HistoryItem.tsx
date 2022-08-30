@@ -1,6 +1,6 @@
 import React from 'react'
 // Chakra imports
-import { Flex, Icon, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Icon, Text, useColorModeValue } from '@chakra-ui/react'
 // Custom components
 import Card from 'components/card/Card'
 // Assets
@@ -33,7 +33,15 @@ export default function NFT (props: {
     >
       <Flex direction={{ base: 'column' }} justify='center'>
         <Flex position='relative' align='center'>
-          <Image src={image} w='66px' h='66px' borderRadius='20px' me='16px' />
+          <Box>
+            <Image
+              src={image}
+              w='66px'
+              h='66px'
+              borderRadius='20px'
+              me='16px'
+            />
+          </Box>
           <Flex
             direction='column'
             w={{ base: '70%', md: '100%' }}
