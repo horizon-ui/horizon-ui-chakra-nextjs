@@ -16,7 +16,11 @@ export default function Default(props: {
 
 	return (
 		<Card py='15px'>
-			<Flex my='auto' h='100%' align={{ base: 'center', xl: 'start' }} justify={{ base: 'center', xl: 'center' }}>
+			<Flex
+				my='auto'
+				h='100%'
+				align={{ base: 'center', xl: 'center' }}
+				justify={{ base: 'center', xl: 'center' }}>
 				{startContent}
 
 				<Stat my='auto' ms={startContent ? '18px' : '0px'}>

@@ -156,8 +156,7 @@ export default function AdminNavbar (props: {
             fixed={fixed}
           />
         </Box>
-      </Flex>
-      {secondary ? <Text color='white'>{message}</Text> : null}
+      </Flex> 
     </Box>
   )
 }
