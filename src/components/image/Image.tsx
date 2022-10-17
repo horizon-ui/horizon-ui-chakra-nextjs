@@ -5,7 +5,7 @@ import { ComponentProps } from "react";
 
 interface ImageProps extends ComponentProps<ChakraComponent<"div", {}>> {}
 
-function parseAssetPrefix(image: string) {
+export function parseAssetPrefix(image: string) {
   const alreadyHasHttp = image.match("http");
   if (alreadyHasHttp) return image;
 
