@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import SEO from "SEO";
 
 export default function Document() {
   return (
@@ -10,6 +11,7 @@ export default function Document() {
           rel="icon"
           href={(process.env.NEXT_PUBLIC_BASE_PATH || "") + "/favicon.ico"}
         />
+        <SEO />
       </Head>
       <body id="root">
         <Main />
