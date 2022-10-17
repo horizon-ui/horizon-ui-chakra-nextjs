@@ -1,4 +1,5 @@
 # Changelog
-## [1.0.0] 2022-xx-xx
+## [1.0.0] 2022-10-17
 
-### Original Release 
+### Original Release
+- Added Typescript & NextJS
