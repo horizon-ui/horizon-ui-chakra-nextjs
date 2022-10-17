@@ -36,6 +36,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "lint": "next lint",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"

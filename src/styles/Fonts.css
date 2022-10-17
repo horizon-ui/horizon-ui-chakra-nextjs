@@ -1,18 +1,12 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+/* @font-face {
   font-family: 'DM Sans';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
   src: url(/fonts/dm-sans/DMSans-Italic.ttf) format('truetype');
 }
-
-/* @font-face {
-  font-family: 'DM Sans';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/fonts/dm-sans/DMSans-Italic.ttf) format('truetype');
-} */
 
 @font-face {
   font-family: 'DM Sans';
@@ -44,4 +38,4 @@
   font-weight: 700;
   font-display: swap;
   src: url(/fonts/dm-sans/DMSans-Bold.ttf) format('truetype');
-}
+} */
