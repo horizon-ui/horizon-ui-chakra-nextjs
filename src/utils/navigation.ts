@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+import { useMemo } from "react";
 import { IRoute } from "types/navigation";
 
 // NextJS Requirement
@@ -26,4 +28,15 @@ export const getActiveNavbar = (routes: IRoute[]): boolean => {
 
 export const getActiveNavbarText = (routes: IRoute[]): string | boolean => {
   return getActiveRoute(routes) || false;
+};
+
+export const useActiveRoute = (routes: IRoute[]): string => {
+  const router = useRouter();
+
+  const currentPath = useMemo(
+    () => routes.find((route) => route?.path?.match(router.pathname)),
+    [router?.pathname, routes]
+  );
+
+  return currentPath?.path || "";
 };
