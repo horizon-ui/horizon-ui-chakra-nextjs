@@ -2,6 +2,7 @@
   "name": "horizon-ui-chakra-typescript",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://test.horizon-ui.com/horizon-ui-chakra-nextjs",
   "dependencies": {
     "@chakra-ui/icons": "^1.1.5",
     "@chakra-ui/react": "1.8.8",
