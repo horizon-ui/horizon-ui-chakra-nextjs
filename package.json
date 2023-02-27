@@ -1,5 +1,6 @@
 {
   "name": "horizon-ui-chakra-typescript",
+  "homepage": "https://test.horizon-ui.com/horizon-ui-chakra-nextjs",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
