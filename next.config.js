@@ -7,12 +7,12 @@ const nextConfig = {
   swcMinify: true,
   // basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   // assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
-  assetPrefix: '/horizon-chakra-nextjs',
+  assetPrefix: '/horizon-ui-chakra-nextjs',
   async redirects() {
     return [ 
       {
         source: "/",
-        destination: "/horizon-chakra-nextjs/admin/default",
+        destination: "/horizon-ui-chakra-nextjs/admin/default",
         permanent: true,
       },
     ];
