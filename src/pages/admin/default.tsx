@@ -3,7 +3,7 @@ import Card from 'components/card/Card'
 import CustomCard from 'components/card/Card'
 import ActiveGovernanceChart from 'components/charts/ActiveGovernanceChart'
 import AdminLayout from 'layouts/admin'
-import Apecoinc from 'public/img/layout/Apecoin-logo.png'
+import ApecoinLogo from 'public/img/layout/Apecoin-logo.png'
 import ChartCard from 'components/charts/ActiveGovernanceChart'
 
 export default function UserReports() {
@@ -27,18 +27,18 @@ export default function UserReports() {
           {/* Grid */}
           <SimpleGrid columns={1} gap='20px' mb='20px'>
     
-            <Card>
-
+            <Card backgroundColor='#25242F'>
+            Top Domain: Social DAO
             </Card>
-            <CustomCard>
-                
-            <ChartCard />
+            <CustomCard backgroundColor='#25242F'>
+                Active Governance Discussion
+            <ChartCard/>
 
             </CustomCard>
             <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap='20px'>
-              <CustomCard>Your Content</CustomCard>
-              <CustomCard>Your Content</CustomCard>
-              <CustomCard>Your Content</CustomCard>
+              <CustomCard backgroundColor='#25242F'>Governance Participation</CustomCard>
+              <CustomCard backgroundColor='#25242F'>Trending Topics</CustomCard>
+              <CustomCard backgroundColor='#25242F'>Top Participants</CustomCard>
             </SimpleGrid>
             
             <CustomCard>Your Content</CustomCard>

@@ -5,7 +5,7 @@ import Chart from 'chart.js/auto';
 const ChartCard = () => {
   const chartRef = useRef(null);
   const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
-  const data = [65, 59, 80, 81, 56, 55, 40];
+  const data = [20, 35, 38, 31, 45, 55, 78];
 
   useEffect(() => {
     if (chartRef && chartRef.current) {
@@ -16,12 +16,46 @@ const ChartCard = () => {
           datasets: [{
             label: 'My First Dataset',
             data,
-            fill: false,
-            borderColor: 'rgb(75, 192, 192)',
+            fill: true,
+            backgroundColor: 'rgba(184, 69, 255, 0.2)',
+            borderColor: '#FFFFFF',
+            borderWidth: 0.4,
+            pointRadius: 3,  // The size of the point
+            pointHoverRadius: 5,  // 
             tension: 0.1
           }]
         },
-      });
+        options: {
+            interaction: {
+                mode: 'nearest',  // Will trigger actions when hovering the nearest item
+                intersect: false,  // Disables the line intersect detection
+              },
+            scales: {
+              x: { // For x-axis
+                grid: {
+                    drawOnChartArea: false,
+                    lineWidth: 0.05,
+                 
+                  color: '#FFFFFF',  // Set your desired grid color here
+                },
+                ticks: {
+                  color: '#FFFFFF',  // Set your desired tick color here
+                }
+              },
+              y: { // For y-axis
+                grid: {
+                  color: '#FFFFFF',  // Set your desired grid color here
+                },
+                ticks: {
+                  color: '#FFFFFF',  // Set your desired tick color here
+                },
+                
+              }
+            }
+
+            
+          }
+        });
 
       return () => {
         chartInstance.destroy();
@@ -30,8 +64,8 @@ const ChartCard = () => {
   }, []);
 
   return (
-    <Box boxShadow="base" p="6" rounded="md" bg="white">
-      <canvas ref={chartRef} />
+    <Box boxShadow="base" p="6" rounded="md" bg="#25242F">
+        <canvas ref={chartRef} style={{backgroundColor: '#211F2E'}} />
     </Box>
   );
 };
