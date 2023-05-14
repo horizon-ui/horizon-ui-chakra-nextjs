@@ -14,6 +14,7 @@ import {
 
 const RadarChart = ({ skills, contributor }) => {
   const radarChartRef = useRef(null);
+  const chartInstanceRef = useRef(null);
 
   useEffect(() => {
     const ctx = radarChartRef.current.getContext('2d');
@@ -107,8 +108,16 @@ const RadarChart = ({ skills, contributor }) => {
         },
       },
     });
-  }, [skills, contributor]);
+    chartInstanceRef.current = chart;
 
+    return () => {
+      // This will be run when the component unmounts or before new render
+      if (chartInstanceRef.current) {
+        // Destroy chart instance
+        chartInstanceRef.current.destroy();
+      }
+    }
+  }, [skills, contributor]);
   return (
     <Box w="100%" h="100%">
       <canvas ref={radarChartRef} />

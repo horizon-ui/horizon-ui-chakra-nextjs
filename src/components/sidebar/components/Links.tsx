@@ -40,7 +40,7 @@ export function SidebarLinks (props: SidebarLinksProps) {
       ) {
         return (
           <Link key={index} href={route.layout + route.path}>
-            <a>
+            
               {route.icon ? (
                 <Box>
                   <HStack
@@ -117,7 +117,7 @@ export function SidebarLinks (props: SidebarLinksProps) {
                   </HStack>
                 </Box>
               )}
-            </a>
+            
           </Link>
         )
       }

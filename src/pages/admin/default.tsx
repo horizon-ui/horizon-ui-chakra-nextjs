@@ -1,86 +1,47 @@
-/*!
-  _   _  ___  ____  ___ ________  _   _   _   _ ___   
- | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
- | |_| | | | | |_) || |  / / | | |  \| | | | | || | 
- |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |
- |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___|
-                                                                                                                                                                                                                                                                                                                                       
-=========================================================
-* Horizon UI - v1.1.0
-=========================================================
-
-* Product Page: https://www.horizon-ui.com/
-* Copyright 2022 Horizon UI (https://www.horizon-ui.com/)
-
-* Designed and Coded by Simmmple
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-import {
-  Avatar,
-  Box,
-  Flex,
-  FormLabel,
-  Icon,
-  Select,
-  SimpleGrid,
-  useColorModeValue
-} from '@chakra-ui/react'
-// Assets
-// Custom components
-
-import IconBox from 'components/icons/IconBox'
-import {
-  MdAddTask,
-  MdAttachMoney,
-  MdBarChart,
-  MdFileCopy
-} from 'react-icons/md'
-
-import {
-  columnsDataCheck,
-  columnsDataComplex,
-  TableData
-} from 'views/admin/default/variables/columnsData'
-import tableDataCheck from 'views/admin/default/variables/tableDataCheck.json'
-import tableDataComplex from 'views/admin/default/variables/tableDataComplex.json'
-import { isWindowAvailable } from 'utils/navigation'
+import { Box, Flex, SimpleGrid, Image, Text, useColorModeValue } from '@chakra-ui/react'
+import Card from 'components/card/Card'
+import CustomCard from 'components/card/Card'
+import ActiveGovernanceChart from 'components/charts/ActiveGovernanceChart'
 import AdminLayout from 'layouts/admin'
-import { Image } from 'components/image/Image'
-import Usa from 'img/dashboards/usa.png'
+import Apecoinc from 'public/img/layout/Apecoin-logo.png'
+import ChartCard from 'components/charts/ActiveGovernanceChart'
 
-export default function UserReports () {
+export default function UserReports() {
+
   // Chakra Color Mode
-
   const brandColor = useColorModeValue('brand.500', 'white')
   const boxBg = useColorModeValue('secondaryGray.300', 'whiteAlpha.100')
 
   return (
     <AdminLayout>
       <Box pt={{ base: '130px', md: '80px', xl: '80px' }}>
+        {/* Banner */}
+        <Box w="full" h="100px" bg={brandColor}>
+          <Flex align="center" justify="start" h="100%" pl="50%">
+            <Image src="/path-to-your-logo.png" alt="Logo" boxSize="50px" />
+            {/* <ApecoinLogo/> */}
+            <Text fontSize="xl" fontWeight="bold" color={boxBg}>Apecoin DAO</Text>
+          </Flex>
+        </Box>
         <>
-          <SimpleGrid
-            columns={{ base: 1, md: 2, lg: 3, '2xl': 6 }}
-            gap='20px'
-            mb='20px'
-          >
-           
-          
-            
-          </SimpleGrid>
+          {/* Grid */}
+          <SimpleGrid columns={1} gap='20px' mb='20px'>
+    
+            <Card>
 
-          <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
-           
-          </SimpleGrid>
-          <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-           
-            <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
-           
-          </SimpleGrid>
+            </Card>
+            <CustomCard>
+                
+            <ChartCard />
+
+            </CustomCard>
+            <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap='20px'>
+              <CustomCard>Your Content</CustomCard>
+              <CustomCard>Your Content</CustomCard>
+              <CustomCard>Your Content</CustomCard>
+            </SimpleGrid>
+            
+            <CustomCard>Your Content</CustomCard>
           </SimpleGrid>
         </>
       </Box>
