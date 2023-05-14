@@ -19,8 +19,8 @@ interface DashboardLayoutProps extends PropsWithChildren {
 }
 
 // Custom Chakra theme
-export default function AdminLayout (props: DashboardLayoutProps) {
-  const { children, ...rest } = props
+export default function AdminLayout(props: DashboardLayoutProps) {
+  const { children, id, ...rest } = props; 
   // states and functions
   const [fixed] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
@@ -53,20 +53,21 @@ export default function AdminLayout (props: DashboardLayoutProps) {
           transitionDuration='.2s, .2s, .35s'
           transitionProperty='top, bottom, width'
           transitionTimingFunction='linear, linear, ease'
+          backgroundColor='#101828'
         >
           <Portal>
-            <Box>
-              <Navbar
-                onOpen={onOpen}
-                logoText={'Horizon UI Dashboard PRO'}
-                brandText={getActiveRoute(routes)}
-                secondary={getActiveNavbar(routes)}
-                message={getActiveNavbarText(routes)}
-                fixed={fixed}
-                {...rest}
-              />
-            </Box>
-          </Portal>
+        <Box>
+          <Navbar
+            onOpen={onOpen}
+            logoText={'Horizon UI Dashboard PRO'}
+            brandText={getActiveRoute(routes, id)} // Pass the id prop
+            secondary={getActiveNavbar(routes)}
+            message={getActiveNavbarText(routes)}
+            fixed={fixed}
+            {...rest}
+          />
+        </Box>
+      </Portal>
 
           <Box
             mx='auto'
@@ -78,7 +79,7 @@ export default function AdminLayout (props: DashboardLayoutProps) {
             {children}
           </Box>
           <Box>
-            <Footer />
+          
           </Box>
         </Box>
       </SidebarContext.Provider>

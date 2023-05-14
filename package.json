@@ -16,6 +16,9 @@
     "@types/jest": "^25.2.3",
     "@types/react-dom": "^18.0.6",
     "apexcharts": "^3.35.2",
+    "chart.js": "3",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "chartjs-plugin-doughnutlabel": "^2.0.3",
     "framer-motion": "^4.1.17",
     "next": "^12.2.5",
     "react": "^17.0.2",
@@ -41,7 +44,11 @@
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",

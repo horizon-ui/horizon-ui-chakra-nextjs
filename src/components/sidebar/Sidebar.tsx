@@ -48,7 +48,7 @@ function Sidebar (props: SidebarProps) {
 
   // SIDEBAR
   return (
-    <Box display={{ sm: 'none', xl: 'block' }} position='fixed' minH='100%'>
+    <Box display={{ sm: 'none', xl: 'block' }} position='fixed' minH='100%' >
       <Box
         bg={sidebarBg}
         transition={variantChange}
@@ -58,6 +58,7 @@ function Sidebar (props: SidebarProps) {
         minH='100%'
         overflowX='hidden'
         boxShadow={shadow}
+        backgroundColor='#25242F'
       >
         <Scrollbars
           autoHide

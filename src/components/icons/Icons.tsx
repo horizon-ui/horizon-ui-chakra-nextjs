@@ -380,8 +380,8 @@ export const PersonIcon = createIcon({
   )
 })
 
-export const ProfileIcon = createIcon({
-  displayName: 'ProfileIcon',
+export const profileIcon = createIcon({
+  displayName: 'profileIcon',
   viewBox: '0 0 24 24',
   path: (
     <g>

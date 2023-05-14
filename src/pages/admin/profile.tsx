@@ -1,121 +1,86 @@
-/*!
-  _   _  ___  ____  ___ ________  _   _   _   _ ___   
- | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
- | |_| | | | | |_) || |  / / | | |  \| | | | | || | 
- |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |
- |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___|
-                                                                                                                                                                                                                                                                                                                                       
-=========================================================
-* Horizon UI - v1.1.0
-=========================================================
+import { Box, SimpleGrid, Stack, HStack, Button } from '@chakra-ui/react';
+import AdminLayout from 'layouts/admin';
+import UserProfileCard from 'components/card/UserProfileCard';
+import RecentProposals from 'views/admin/profile/components/RecentProposals';
+import Avatar1 from 'img/avatars/avatar1.png';
+import Card from 'components/card/Card';
+import contributorData from 'utils/data/contributor1.json';
+import RadarChart from 'components/charts/RadarChart';
+import DoughnutChart from 'components/charts/DoughnutChart';
+import ProposalCard from 'components/card/ProposalCard';
+import HoverCard from 'components/card/HoverCard'
+import { InfoOutlineIcon } from '@chakra-ui/icons';
+import { Tooltip } from '@chakra-ui/react';
 
-* Product Page: https://www.horizon-ui.com/
-* Copyright 2022 Horizon UI (https://www.horizon-ui.com/)
+export default function profileOverview() {
+  const { skills, values, qualityScore, relevancyScore } = contributorData;
 
-* Designed and Coded by Simmmple
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// Chakra imports
-import { Box, Grid } from '@chakra-ui/react'
-import AdminLayout from 'layouts/admin'
-
-// Custom components
-import Banner from 'views/admin/profile/components/Banner'
-import General from 'views/admin/profile/components/General'
-import Notifications from 'views/admin/profile/components/Notifications'
-import Projects from 'views/admin/profile/components/Projects'
-import Storage from 'views/admin/profile/components/Storage'
-import Upload from 'views/admin/profile/components/Upload'
-
-// Assets
-import banner from 'img/auth/banner.png'
-import avatar from 'img/avatars/avatar4.png'
-
-export default function ProfileOverview () {
   return (
     <AdminLayout>
-      <Box pt={{ base: '130px', md: '80px', xl: '80px' }}>
-        {/* Main Fields */}
-        <Grid
-          templateColumns={{
-            base: '1fr',
-            lg: '1.34fr 1fr 1.62fr'
-          }}
-          templateRows={{
-            base: 'repeat(3, 1fr)',
-            lg: '1fr'
-          }}
-          gap={{ base: '20px', xl: '20px' }}
-        >
-          <Banner
-            gridArea='1 / 1 / 2 / 2'
-            banner={banner}
-            avatar={avatar}
-            name='Adela Parkson'
-            job='Product Designer'
-            posts='17'
-            followers='9.7k'
-            following='274'
-          />
-          <Storage
-            gridArea={{ base: '2 / 1 / 3 / 2', lg: '1 / 2 / 2 / 3' }}
-            used={25.6}
-            total={50}
-          />
-          <Upload
-            gridArea={{
-              base: '3 / 1 / 4 / 2',
-              lg: '1 / 3 / 2 / 4'
-            }}
-            minH={{ base: 'auto', lg: '420px', '2xl': '365px' }}
-            pe='20px'
-            pb={{ base: '100px', lg: '20px' }}
-          />
-        </Grid>
-        <Grid
-          mb='20px'
-          templateColumns={{
-            base: '1fr',
-            lg: 'repeat(2, 1fr)',
-            '2xl': '1.34fr 1.62fr 1fr'
-          }}
-          templateRows={{
-            base: '1fr',
-            lg: 'repeat(2, 1fr)',
-            '2xl': '1fr'
-          }}
-          gap={{ base: '20px', xl: '20px' }}
-        >
-          <Projects
-            banner={banner}
-            avatar={avatar}
-            name='Adela Parkson'
-            job='Product Designer'
-            posts='17'
-            followers='9.7k'
-            following='274'
-          />
-          <General
-            gridArea={{ base: '2 / 1 / 3 / 2', lg: '1 / 2 / 2 / 3' }}
-            minH='365px'
-            pe='20px'
-          />
-          <Notifications
-            used={25.6}
-            total={50}
-            gridArea={{
-              base: '3 / 1 / 4 / 2',
-              lg: '2 / 1 / 3 / 3',
-              '2xl': '1 / 3 / 2 / 4'
-            }}
-          />
-        </Grid>
+      <Box pt={{ base: '130px', md: '80px', xl: '80px' }} w="100%">
+        <UserProfileCard
+          avatar={Avatar1}
+          name='Lyons800'
+          discord={true}
+          github={false}
+          twitter={true}
+          xp={1200}
+          size="lg"
+          variant="filled"
+        />
+        <HStack spacing={10} mt={5} align="start">
+          <Card backgroundColor='#25242F' >
+            <Stack spacing={10}>
+              {/* Three Cards above the Doughnut Charts */}
+              <HStack spacing={10}>
+                <Card backgroundColor='#4B4066'>
+                  {/* Card content */}
+                </Card>
+                <Card backgroundColor='#92C092'>
+                  {/* Card content */}
+                </Card>
+                <Card backgroundColor='#28375F'>
+                  {/* Card content */}
+                </Card>
+              </HStack>
+
+              {/* Doughnut Charts */}
+              <HStack spacing={10}>
+                <Card backgroundColor='#252B3B'>
+                  <Tooltip label='This is a score that measures the users quality of contributions to proposals' fontSize='md'>
+                    <InfoOutlineIcon />
+                  </Tooltip>
+                  <DoughnutChart score={qualityScore} backgroundColor='#383645' foregroundColor='#A0A4F5' />
+                  <Button fontSize='small'> Create PolygonID Credential  </Button>
+                </Card>
+
+
+                <Card backgroundColor='#252B3B' >
+                <Tooltip label='This is a score that measures the users relevancy of contributions to proposals' fontSize='md'>
+                    <InfoOutlineIcon />
+                  </Tooltip>
+                  <DoughnutChart score={relevancyScore} backgroundColor='#383645' foregroundColor='#5056D2' zIndex='999' />
+                  <Button fontSize='small' overflow='hidden'> Create PolygonID Credential </Button>
+                </Card>
+
+
+                {/* <HoverCard qualityScore={75} onButtonClick={handleButtonClick} /> */}
+              </HStack>
+
+              {/* Radar Chart */}
+              <Card backgroundColor='#252B3B'>
+              <Tooltip label='This is a radar chart that showcases a DAO contributors top skills' fontSize='md'>
+                    <InfoOutlineIcon />
+                  </Tooltip>
+                <RadarChart skills={skills} contributor={values} backgroundColor='#383645' foregroundColor='#FFFFFF' />
+              </Card>
+            </Stack>
+          </Card>
+          <Card backgroundColor='#25242F'>
+            <RecentProposals username={'Lyons'} />
+          </Card>
+        </HStack>
       </Box>
     </AdminLayout>
-  )
+  );
 }

@@ -1,83 +1,29 @@
-import { Button, Flex, Link, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Spacer, Text, useColorModeValue } from '@chakra-ui/react'
 import { Image } from 'components/image/Image'
 import logoWhite from 'img/layout/logoWhite.png'
+import CustomCard from 'components/card/Card'
 
-export default function SidebarDocs () {
-  const bgColor = 'linear-gradient(135deg, #868CFF 0%, #4318FF 100%)'
+export default function SidebarDocs ({ userName, userXP, userAvatar }) {
+  const bgColor = '#FBCAFF'
   const borderColor = useColorModeValue('white', 'navy.800')
 
   return (
-    <Flex
-      justify='center'
-      direction='column'
-      align='center'
-      bg={bgColor}
-      borderRadius='30px'
-      me='20px'
-      position='relative'
-    >
-      <Flex
-        border='5px solid'
-        borderColor={borderColor}
-        bg='linear-gradient(135deg, #868CFF 0%, #4318FF 100%)'
-        borderRadius='50%'
-        w='94px'
-        h='94px'
-        align='center'
-        justify='center'
-        mx='auto'
-        position='absolute'
-        left='50%'
-        top='-47px'
-        transform='translate(-50%, 0%)'
-      >
-        <Image src={logoWhite} w='40px' h='40px' />
+    <CustomCard backgroundColor='#5F55D6' width='95%'>
+      <Flex direction="row" alignItems="center" height="100%">
+        <Image 
+          boxHeight="80%"
+          borderRadius="full"
+          objectFit="cover"
+          src={userAvatar}
+          alt="User Avatar"
+        />
+        <Text color="white" ml={3}>{userName} Lyons800</Text>
+        <Spacer />
+        <Box backgroundColor={bgColor} borderRadius="35px" p={2} mr={2}>
+          <Text color="#5F55D6">{`XP: 150`}</Text>
+        </Box>
       </Flex>
-      <Flex
-        direction='column'
-        mb='12px'
-        align='center'
-        justify='center'
-        px='15px'
-        pt='55px'
-      >
-        <Text
-          fontSize={{ base: 'lg', xl: '18px' }}
-          color='white'
-          fontWeight='bold'
-          lineHeight='150%'
-          textAlign='center'
-          px='10px'
-          mb='14px'
-        >
-          Upgrade to PRO
-        </Text>
-        <Text
-          fontSize='14px'
-          color={'white'}
-          px='10px'
-          mb='14px'
-          textAlign='center'
-        >
-          Improve your development process and start doing more with Horizon UI
-          PRO!
-        </Text>
-      </Flex>
-      <Link href='https://horizon-ui.com/pro'>
-        <Button
-          bg='whiteAlpha.300'
-          _hover={{ bg: 'whiteAlpha.200' }}
-          _active={{ bg: 'whiteAlpha.100' }}
-          mb={{ sm: '16px', xl: '24px' }}
-          color={'white'}
-          fontWeight='regular'
-          fontSize='sm'
-          minW='185px'
-          mx='auto'
-        >
-          Upgrade to PRO
-        </Button>
-      </Link>
-    </Flex>
+    </CustomCard>
   )
 }
+

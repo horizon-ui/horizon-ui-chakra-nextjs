@@ -137,22 +137,8 @@ export default function HeaderLinks(props: { secondary: boolean }) {
 								Buy Horizon UI PRO
 							</Button>
 						</Link>
-						<Link w='100%' href='https://horizon-ui.com/documentation/docs/introduction'>
-							<Button
-								w='100%'
-								h='44px'
-								mb='10px'
-								border='1px solid'
-								bg='transparent'
-								borderColor={borderButton}>
-								See Documentation
-							</Button>
-						</Link>
-						<Link w='100%' href='https://github.com/horizon-ui/horizon-ui-chakra-nextjs'>
-							<Button w='100%' h='44px' variant='no-hover' color={textColor} bg='transparent'>
-								Try Horizon Free
-							</Button>
-						</Link>
+						
+						
 					</Flex>
 				</MenuList>
 			</Menu>
@@ -203,7 +189,7 @@ export default function HeaderLinks(props: { secondary: boolean }) {
 					</Flex>
 					<Flex flexDirection='column' p='10px'>
 						<MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} borderRadius='8px' px='14px'>
-							<Text fontSize='sm'>Profile Settings</Text>
+							<Text fontSize='sm'>profile Settings</Text>
 						</MenuItem>
 						<MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} borderRadius='8px' px='14px'>
 							<Text fontSize='sm'>Newsletter Settings</Text>

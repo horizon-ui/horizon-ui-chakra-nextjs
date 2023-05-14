@@ -1,0 +1,14 @@
+{
+    "skills": ["Development", "Design", "Governance", "Operations", "Artificial Intelligence"],
+    "values": {
+      "Development": 6,
+      "Design": 4,
+      "Governance": 3,
+      "Operations": 5,
+      "Artificial Intelligence": 6
+    },
+
+    "qualityScore" : 72,
+    "relevancyScore": 59
+  }
+
