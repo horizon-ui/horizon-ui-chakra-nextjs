@@ -2,6 +2,9 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { AppProps } from 'next/app'
 import React from 'react'
 import theme from 'theme/theme'
+import { UserProvider} from '@auth0/nextjs-auth0/client';
+import { HandleAuth } from '@auth0/nextjs-auth0';
+import { handleAuth } from '@auth0/nextjs-auth0';
 
 import 'styles/Fonts.css'
 import 'styles/App.css'
@@ -13,6 +16,7 @@ import Head from 'next/head'
 
 function MyApp ({ Component, pageProps }: AppProps) {
   return (
+    <UserProvider>
     <ChakraProvider theme={theme}>
       <Head>
         <title>Horizon UI Dashboard</title>
@@ -23,6 +27,8 @@ function MyApp ({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </React.StrictMode>
     </ChakraProvider>
+    </UserProvider>
+    
   )
 }
 

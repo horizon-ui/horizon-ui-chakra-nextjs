@@ -28,6 +28,7 @@ export default function profileOverview() {
           size="lg"
           variant="filled"
         />
+        <a href="/api/auth/login">Login</a>
         <HStack spacing={10} mt={5} align="start">
           <Card backgroundColor='#25242F' >
             <Stack spacing={10}>
