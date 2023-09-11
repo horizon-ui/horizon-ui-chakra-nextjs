@@ -226,9 +226,9 @@ export default function SignIn() {
             maxW="100%"
             mt="0px"
           >
-            <Text color={textColorDetails} fontWeight="400" fontSize="14px">
-              Not registered yet?
-              <Link href="/auth/sign-up">
+            <Link href="/auth/sign-up">
+              <Text color={textColorDetails} fontWeight="400" fontSize="14px">
+                Not registered yet?
                 <Text
                   color={textColorBrand}
                   as="span"
@@ -237,8 +237,8 @@ export default function SignIn() {
                 >
                   Create an Account
                 </Text>
-              </Link>
-            </Text>
+              </Text>
+            </Link>
           </Flex>
         </Flex>
       </Flex>
