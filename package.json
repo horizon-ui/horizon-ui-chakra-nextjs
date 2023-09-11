@@ -17,17 +17,17 @@
     "@types/react-dom": "^18.0.6",
     "apexcharts": "^3.35.2",
     "framer-motion": "^4.1.17",
-    "next": "^12.2.5",
-    "react": "18.2.0",
+    "next": "^13.4.19",
+    "react": "^18.2.0",
     "react-apexcharts": "^1.4.0",
     "react-calendar": "^3.7.0",
     "react-custom-scrollbars-2": "^4.2.1",
-    "react-dom": "18.2.0", 
+    "react-dom": "^18.2.0",
     "react-dropzone": "^12.0.4",
     "react-icons": "^4.3.1",
     "react-is": "^18.0.0",
-    "react-table": "^7.8.0",   
-    "react-no-ssr": "^1.1.0",  
+    "react-no-ssr": "^1.1.0",
+    "react-table": "^7.8.0",
     "stylis": "^4.1.1",
     "stylis-plugin-rtl": "2.0.2",
     "typescript": "^4.7.4",
@@ -42,7 +42,11 @@
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -52,8 +56,8 @@
   "devDependencies": {
     "@types/node": "^18.7.6",
     "@types/react": "18.2.0",
-    "@types/react-calendar": "^3.5.2", 
-    "@types/react-table": "^7.7.12", 
+    "@types/react-calendar": "^3.5.2",
+    "@types/react-table": "^7.7.12",
     "eslint": "^8.23.0",
     "eslint-config-next": "^12.2.5",
     "gh-pages": "^3.2.3"
