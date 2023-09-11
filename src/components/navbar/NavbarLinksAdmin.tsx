@@ -6,6 +6,7 @@ import {
   Icon,
   Link,
   Menu,
+  Image,
   MenuButton,
   MenuItem,
   MenuList,
@@ -20,12 +21,11 @@ import { SidebarResponsive } from 'components/sidebar/Sidebar';
 import PropTypes from 'prop-types';
 import React from 'react';
 // Assets
-import navImage from 'img/layout/Navbar.png';
+import navImage from '../../../public/img/layout/Navbar.png';
 import { MdNotificationsNone, MdInfoOutline } from 'react-icons/md';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import { FaEthereum } from 'react-icons/fa';
 import routes from 'routes';
-import { Image } from 'components/image/Image';
 export default function HeaderLinks(props: { secondary: boolean }) {
   const { secondary } = props;
   const { colorMode, toggleColorMode } = useColorMode();
@@ -180,7 +180,7 @@ export default function HeaderLinks(props: { secondary: boolean }) {
           minW={{ base: 'unset' }}
           maxW={{ base: '360px', md: 'unset' }}
         >
-          <Image alt="" src={navImage} borderRadius="16px" mb="28px" />
+          <Image alt="" src={navImage.src} borderRadius="16px" mb="28px" />
           <Flex flexDirection="column">
             <Link w="100%" href="https://horizon-ui.com/pro">
               <Button w="100%" h="44px" mb="10px" variant="brand">
