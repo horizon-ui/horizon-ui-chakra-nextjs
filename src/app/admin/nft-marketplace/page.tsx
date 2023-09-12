@@ -1,16 +1,16 @@
-'use client'
+'use client';
 /*!
-  _   _  ___  ____  ___ ________  _   _   _   _ ___   ____  ____   ___  
- | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| |  _ \|  _ \ / _ \ 
- | |_| | | | | |_) || |  / / | | |  \| | | | | || |  | |_) | |_) | | | |
- |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |  |  __/|  _ <| |_| |
- |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___| |_|   |_| \_\\___/ 
+  _   _  ___  ____  ___ ________  _   _   _   _ ___   
+ | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
+ | |_| | | | | |_) || |  / / | | |  \| | | | | || | 
+ |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |
+ |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___|
                                                                                                                                                                                                                                                                                                                                        
 =========================================================
-* Horizon UI Dashboard PRO - v1.0.0
+* Horizon UI - v1.1.0
 =========================================================
 
-* Product Page: https://www.horizon-ui.com/pro/
+* Product Page: https://www.horizon-ui.com/
 * Copyright 2022 Horizon UI (https://www.horizon-ui.com/)
 
 * Designed and Coded by Simmmple
@@ -21,6 +21,8 @@
 
 */
 
+import React from 'react';
+
 // Chakra imports
 import {
   Box,
@@ -30,30 +32,30 @@ import {
   Text,
   useColorModeValue,
   SimpleGrid,
+  Link,
 } from '@chakra-ui/react';
-import Link from 'components/link/Link';
 
 // Custom components
-import Banner from 'components/admin/nfts/marketplace/Banner';
-import TableTopCreators from 'components/admin/nfts/marketplace/TableTopCreators';
-import HistoryItem from 'components/admin/nfts/marketplace/HistoryItem';
+import TableTopCreators from 'views/admin/marketplace/components/TableTopCreators';
+import HistoryItem from 'views/admin/marketplace/components/HistoryItem';
 import NFT from 'components/card/NFT';
 import Card from 'components/card/Card';
+import tableDataTopCreators from 'views/admin/marketplace/variables/tableDataTopCreators';
 
 // Assets
-import Nft1 from '/public/img/nfts/Nft1.png';
-import Nft2 from '/public/img/nfts/Nft2.png';
-import Nft3 from '/public/img/nfts/Nft3.png';
-import Nft4 from '/public/img/nfts/Nft4.png';
-import Nft5 from '/public/img/nfts/Nft5.png';
-import Nft6 from '/public/img/nfts/Nft6.png';
-import Avatar1 from '/public/img/avatars/avatar1.png';
-import Avatar2 from '/public/img/avatars/avatar2.png';
-import Avatar3 from '/public/img/avatars/avatar3.png';
-import Avatar4 from '/public/img/avatars/avatar4.png';
-import tableDataTopCreators from 'variables/nfts/marketplace/tableDataTopCreators';
+import Nft1 from 'img/nfts/Nft1.png';
+import Nft2 from 'img/nfts/Nft2.png';
+import Nft3 from 'img/nfts/Nft3.png';
+import Nft4 from 'img/nfts/Nft4.png';
+import Nft5 from 'img/nfts/Nft5.png';
+import Nft6 from 'img/nfts/Nft6.png';
+import Avatar1 from 'img/avatars/avatar1.png';
+import Avatar2 from 'img/avatars/avatar2.png';
+import Avatar3 from 'img/avatars/avatar3.png';
+import Avatar4 from 'img/avatars/avatar4.png';
+import AdminLayout from 'layouts/admin';
 
-export default function Marketplace() {
+export default function NftMarketplace() {
   // Chakra Color Mode
   const textColor = useColorModeValue('secondaryGray.900', 'white');
   const textColorBrand = useColorModeValue('brand.500', 'white');
@@ -70,7 +72,7 @@ export default function Marketplace() {
           flexDirection="column"
           gridArea={{ xl: '1 / 1 / 2 / 3', '2xl': '1 / 1 / 2 / 2' }}
         >
-          <Banner />
+          {/* <Banner /> */}
           <Flex direction="column">
             <Flex
               mt="45px"
@@ -79,12 +81,7 @@ export default function Marketplace() {
               direction={{ base: 'column', md: 'row' }}
               align={{ base: 'start', md: 'center' }}
             >
-              <Text
-                color={textColor}
-                fontSize="2xl"
-                ms="24px"
-                fontWeight="700"
-              >
+              <Text color={textColor} fontSize="2xl" ms="24px" fontWeight="700">
                 Trending NFTs
               </Text>
               <Flex
@@ -94,28 +91,30 @@ export default function Marketplace() {
                 mt={{ base: '20px', md: '0px' }}
               >
                 <Link
+                  href="#art"
                   color={textColorBrand}
                   fontWeight="500"
                   me={{ base: '34px', md: '44px' }}
-                  href={''}
                 >
                   Art
                 </Link>
                 <Link
-                  href={''}
-                  color={textColorBrand}
-                  me={{ base: '34px', md: '44px' }}>
-                  Music
-                </Link>
-                <Link
+                  href="#music"
                   color={textColorBrand}
                   fontWeight="500"
                   me={{ base: '34px', md: '44px' }}
-                  href="/admin/nfts#collectibles"
+                >
+                  Music
+                </Link>
+                <Link
+                  href="#collectibles"
+                  color={textColorBrand}
+                  fontWeight="500"
+                  me={{ base: '34px', md: '44px' }}
                 >
                   Collectibles
                 </Link>
-                <Link color={textColorBrand} fontWeight="500" href="/admin/nfts#sports">
+                <Link href="#sports" color={textColorBrand} fontWeight="500">
                   Sports
                 </Link>
               </Flex>

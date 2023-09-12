@@ -1,30 +1,30 @@
+'use client';
 // Chakra Imports
 import {
-  Avatar,
+  Box,
   Button,
+  Center,
   Flex,
   Icon,
   Link,
   Menu,
-  Image,
   MenuButton,
   MenuItem,
   MenuList,
   Text,
-  useColorModeValue,
   useColorMode,
+  useColorModeValue,
 } from '@chakra-ui/react';
 // Custom Components
+import { Image } from 'components/image/Image';
 import { ItemContent } from 'components/menu/ItemContent';
 import { SearchBar } from 'components/navbar/searchBar/SearchBar';
 import { SidebarResponsive } from 'components/sidebar/Sidebar';
-import PropTypes from 'prop-types';
-import React from 'react';
 // Assets
-import navImage from '../../../public/img/layout/Navbar.png';
-import { MdNotificationsNone, MdInfoOutline } from 'react-icons/md';
-import { IoMdMoon, IoMdSunny } from 'react-icons/io';
+import navImage from '/public/img/layout/Navbar.png';
 import { FaEthereum } from 'react-icons/fa';
+import { IoMdMoon, IoMdSunny } from 'react-icons/io';
+import { MdInfoOutline, MdNotificationsNone } from 'react-icons/md';
 import routes from 'routes';
 export default function HeaderLinks(props: { secondary: boolean }) {
   const { secondary } = props;
@@ -43,6 +43,7 @@ export default function HeaderLinks(props: { secondary: boolean }) {
     '14px 17px 40px 4px rgba(112, 144, 176, 0.06)',
   );
   const borderButton = useColorModeValue('secondaryGray.500', 'whiteAlpha.200');
+
   return (
     <Flex
       w={{ sm: '100%', md: 'auto' }}
@@ -180,7 +181,7 @@ export default function HeaderLinks(props: { secondary: boolean }) {
           minW={{ base: 'unset' }}
           maxW={{ base: '360px', md: 'unset' }}
         >
-          <Image alt="" src={navImage.src} borderRadius="16px" mb="28px" />
+          <Image src={navImage} borderRadius="16px" mb="28px" alt="" />
           <Flex flexDirection="column">
             <Link w="100%" href="https://horizon-ui.com/pro">
               <Button w="100%" h="44px" mb="10px" variant="brand">
@@ -239,16 +240,20 @@ export default function HeaderLinks(props: { secondary: boolean }) {
         />
       </Button>
       <Menu>
-        <MenuButton p="0px">
-          <Avatar
+        <MenuButton p="0px" style={{ position: 'relative' }}>
+          <Box
             _hover={{ cursor: 'pointer' }}
             color="white"
-            name="Adela Parkson"
             bg="#11047A"
-            size="sm"
             w="40px"
             h="40px"
+            borderRadius={'50%'}
           />
+          <Center top={0} left={0} position={'absolute'} w={'100%'} h={'100%'}>
+            <Text fontSize={'xs'} fontWeight="bold" color={'white'}>
+              AP
+            </Text>
+          </Center>
         </MenuButton>
         <MenuList
           boxShadow={shadow}
@@ -305,10 +310,3 @@ export default function HeaderLinks(props: { secondary: boolean }) {
     </Flex>
   );
 }
-
-HeaderLinks.propTypes = {
-  variant: PropTypes.string,
-  fixed: PropTypes.bool,
-  secondary: PropTypes.bool,
-  onOpen: PropTypes.func,
-};

@@ -1,6 +1,11 @@
 'use client';
 // Chakra imports
-import { Portal, Box, useDisclosure } from '@chakra-ui/react';
+import {
+  Portal,
+  Box,
+  useDisclosure,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import Footer from 'components/footer/FooterAdmin';
 // Layout components
 import Navbar from 'components/navbar/NavbarAdmin';
@@ -12,7 +17,6 @@ import {
   getActiveNavbar,
   getActiveNavbarText,
   getActiveRoute,
-  isWindowAvailable,
 } from 'utils/navigation';
 
 interface DashboardLayoutProps extends PropsWithChildren {
@@ -32,8 +36,10 @@ export default function AdminLayout(props: DashboardLayoutProps) {
     window.document.documentElement.dir = 'ltr';
   });
 
+  const bg = useColorModeValue('secondaryGray.300', 'navy.900');
+
   return (
-    <Box>
+    <Box h="100vh" w="100vw" bg={bg}>
       <SidebarContext.Provider
         value={{
           toggleSidebar,

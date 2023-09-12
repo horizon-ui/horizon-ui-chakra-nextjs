@@ -1,16 +1,16 @@
-'use client'
+'use client';
 /*!
-  _   _  ___  ____  ___ ________  _   _   _   _ ___   ____  ____   ___  
- | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| |  _ \|  _ \ / _ \ 
- | |_| | | | | |_) || |  / / | | |  \| | | | | || |  | |_) | |_) | | | |
- |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |  |  __/|  _ <| |_| |
- |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___| |_|   |_| \_\\___/ 
+  _   _  ___  ____  ___ ________  _   _   _   _ ___   
+ | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
+ | |_| | | | | |_) || |  / / | | |  \| | | | | || | 
+ |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |
+ |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___|
                                                                                                                                                                                                                                                                                                                                        
 =========================================================
-* Horizon UI Dashboard PRO - v1.0.0
+* Horizon UI - v1.1.0
 =========================================================
 
-* Product Page: https://www.horizon-ui.com/pro/
+* Product Page: https://www.horizon-ui.com/
 * Copyright 2022 Horizon UI (https://www.horizon-ui.com/)
 
 * Designed and Coded by Simmmple
@@ -23,20 +23,21 @@
 
 // Chakra imports
 import { Box, Grid } from '@chakra-ui/react';
+import AdminLayout from 'layouts/admin';
 
 // Custom components
-import Banner from 'components/admin/main/profile/overview/Banner';
-import General from 'components/admin/main/profile/overview/General';
-import Notifications from 'components/admin/main/profile/overview/Notifications';
-import Projects from 'components/admin/main/profile/overview/Projects';
-import Storage from 'components/admin/main/profile/overview/Storage';
-import Upload from 'components/admin/main/profile/overview/Upload';
+import Banner from 'views/admin/profile/components/Banner';
+import General from 'views/admin/profile/components/General';
+import Notifications from 'views/admin/profile/components/Notifications';
+import Projects from 'views/admin/profile/components/Projects';
+import Storage from 'views/admin/profile/components/Storage';
+import Upload from 'views/admin/profile/components/Upload';
 
 // Assets
-import banner from '/public/img/auth/banner.png';
-import avatar from '/public/img/avatars/avatar4.png';
+import banner from 'img/auth/banner.png';
+import avatar from 'img/avatars/avatar4.png';
 
-export default function Overview() {
+export default function ProfileOverview() {
   return (
     <Box pt={{ base: '130px', md: '80px', xl: '80px' }}>
       {/* Main Fields */}
@@ -62,16 +63,15 @@ export default function Overview() {
           following="274"
         />
         <Storage
-          /*gridArea={{ base: '2 / 1 / 3 / 2', lg: '1 / 2 / 2 / 3' }}*/ used={
-            25.6
-          }
+          gridArea={{ base: '2 / 1 / 3 / 2', lg: '1 / 2 / 2 / 3' }}
+          used={25.6}
           total={50}
         />
         <Upload
-          /*gridArea={{
-          base: '3 / 1 / 4 / 2',
-          lg: '1 / 3 / 2 / 4'
-        }}*/
+          gridArea={{
+            base: '3 / 1 / 4 / 2',
+            lg: '1 / 3 / 2 / 4',
+          }}
           minH={{ base: 'auto', lg: '420px', '2xl': '365px' }}
           pe="20px"
           pb={{ base: '100px', lg: '20px' }}
@@ -91,7 +91,15 @@ export default function Overview() {
         }}
         gap={{ base: '20px', xl: '20px' }}
       >
-        <Projects />
+        <Projects
+          banner={banner}
+          avatar={avatar}
+          name="Adela Parkson"
+          job="Product Designer"
+          posts="17"
+          followers="9.7k"
+          following="274"
+        />
         <General
           gridArea={{ base: '2 / 1 / 3 / 2', lg: '1 / 2 / 2 / 3' }}
           minH="365px"
