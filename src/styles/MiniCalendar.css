@@ -1,7 +1,9 @@
+/* LIGHT MODE + GENERAL */
+
 .react-calendar {
-  border: unset;
-  background-color: transparent;
-  font-family: "DM Sans", sans-serif;
+  border: none !important;
+  background-color: transparent !important;
+  font-family: 'DM Sans', sans-serif;
 }
 .react-calendar__navigation__prev2-button {
   display: none;
