@@ -22,17 +22,17 @@
 */
 
 import {
-  Avatar,
   Box,
   Flex,
   FormLabel,
+  Image,
   Icon,
   Select,
   SimpleGrid,
   useColorModeValue,
 } from '@chakra-ui/react';
 // Custom components
-import MiniCalendar from 'components/calendar/MiniCalendar';
+// import MiniCalendar from 'components/calendar/MiniCalendar';
 import MiniStatistics from 'components/card/MiniStatistics';
 import IconBox from 'components/icons/IconBox';
 import {
@@ -51,7 +51,6 @@ import WeeklyRevenue from 'views/admin/default/components/WeeklyRevenue';
 import tableDataCheck from 'views/admin/default/variables/tableDataCheck';
 import tableDataComplex from 'views/admin/default/variables/tableDataComplex';
 // Assets
-import { Image } from 'components/image/Image';
 import Usa from 'img/dashboards/usa.png';
 
 export default function Default() {
@@ -101,7 +100,7 @@ export default function Default() {
             <Flex me="-16px" mt="10px">
               <FormLabel htmlFor="balance">
                 <Box boxSize={'12'}>
-                  <Image alt="" src={Usa} w={'100%'} h={'100%'} />
+                  <Image alt="" src={Usa.src} w={'100%'} h={'100%'} />
                 </Box>
               </FormLabel>
               <Select
@@ -163,7 +162,7 @@ export default function Default() {
         <ComplexTable tableData={tableDataComplex} />
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
           <Tasks />
-          <MiniCalendar h="100%" minW="100%" selectRange={false} />
+          {/* <MiniCalendar h="100%" minW="100%" selectRange={false} /> */}
         </SimpleGrid>
       </SimpleGrid>
     </Box>
