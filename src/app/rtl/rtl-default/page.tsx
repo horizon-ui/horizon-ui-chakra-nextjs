@@ -23,6 +23,7 @@
 
 // Chakra imports
 import {
+  Avatar,
   Box,
   Flex,
   Icon,
@@ -97,7 +98,7 @@ export default function UserReports() {
         <MiniStatistics
           startContent={
             <Box height={'56px'} width={'56px'}>
-              <ChakraNextAvatar src={Usa} height={'56px'} width={'56px'} />
+              <Avatar src={Usa} height={'56px'} width={'56px'} />
             </Box>
           }
           endContent={
