@@ -98,7 +98,7 @@ export default function UserReports() {
         <MiniStatistics
           startContent={
             <Box height={'56px'} width={'56px'}>
-              <Avatar src={Usa} height={'56px'} width={'56px'} />
+              <Avatar src={Usa.src} height={'56px'} width={'56px'} />
             </Box>
           }
           endContent={
