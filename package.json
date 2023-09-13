@@ -1,6 +1,6 @@
 {
   "name": "horizon-ui-chakra-nextjs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
