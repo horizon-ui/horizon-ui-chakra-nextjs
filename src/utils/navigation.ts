@@ -3,7 +3,7 @@ import { IRoute } from "types/navigation";
 // NextJS Requirement
 export const isWindowAvailable = () => typeof window !== "undefined";
 
-export const findCurrentRoute = (routes: IRoute[]): IRoute => {
+export const findCurrentRoute = (routes: IRoute[]): IRoute => { 
   const foundRoute: IRoute = routes.find(
     (route) =>
       isWindowAvailable() &&

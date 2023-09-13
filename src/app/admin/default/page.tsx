@@ -1,3 +1,4 @@
+'use client';
 /*!
   _   _  ___  ____  ___ ________  _   _   _   _ ___   
  | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
@@ -17,27 +18,23 @@
 =========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- as unknown as TableData[]
+
 */
 
-// Chakra imports
 import {
-  Avatar,
   Box,
   Flex,
   FormLabel,
+  Image,
   Icon,
   Select,
   SimpleGrid,
   useColorModeValue,
 } from '@chakra-ui/react';
-// Assets
-import Usa from 'img/dashboards/usa.png';
 // Custom components
-import MiniCalendar from 'components/calendar/MiniCalendar';
+// import MiniCalendar from 'components/calendar/MiniCalendar';
 import MiniStatistics from 'components/card/MiniStatistics';
 import IconBox from 'components/icons/IconBox';
-import React from 'react';
 import {
   MdAddTask,
   MdAttachMoney,
@@ -53,11 +50,15 @@ import TotalSpent from 'views/admin/default/components/TotalSpent';
 import WeeklyRevenue from 'views/admin/default/components/WeeklyRevenue';
 import tableDataCheck from 'views/admin/default/variables/tableDataCheck';
 import tableDataComplex from 'views/admin/default/variables/tableDataComplex';
+// Assets
+import Usa from 'img/dashboards/usa.png';
 
-export default function UserReports() {
+export default function Default() {
   // Chakra Color Mode
+
   const brandColor = useColorModeValue('brand.500', 'white');
   const boxBg = useColorModeValue('secondaryGray.300', 'whiteAlpha.100');
+
   return (
     <Box pt={{ base: '130px', md: '80px', xl: '80px' }}>
       <SimpleGrid
@@ -98,7 +99,9 @@ export default function UserReports() {
           endContent={
             <Flex me="-16px" mt="10px">
               <FormLabel htmlFor="balance">
-                <Avatar src={Usa} />
+                <Box boxSize={'12'}>
+                  <Image alt="" src={Usa.src} w={'100%'} h={'100%'} />
+                </Box>
               </FormLabel>
               <Select
                 id="balance"
@@ -159,7 +162,7 @@ export default function UserReports() {
         <ComplexTable tableData={tableDataComplex} />
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
           <Tasks />
-          <MiniCalendar h="100%" minW="100%" selectRange={false} />
+          {/* <MiniCalendar h="100%" minW="100%" selectRange={false} /> */}
         </SimpleGrid>
       </SimpleGrid>
     </Box>
