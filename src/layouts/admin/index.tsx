@@ -58,7 +58,7 @@ export default function AdminLayout (props: DashboardLayoutProps) {
             <Box>
               <Navbar
                 onOpen={onOpen}
-                logoText={'Horizon UI Dashboard PRO'}
+                logoText={'Horizon UI Dashboard PROO'}
                 brandText={getActiveRoute(routes)}
                 secondary={getActiveNavbar(routes)}
                 message={getActiveNavbarText(routes)}
