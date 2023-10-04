@@ -63,5 +63,9 @@
     "eslint": "^8.23.0",
     "eslint-config-next": "^12.2.5",
     "gh-pages": "^3.2.3"
+  },
+  "resolutions": {
+    "@types/react": "18.0.31",
+    "@types/react-dom": "18.0.11"
   }
 }
