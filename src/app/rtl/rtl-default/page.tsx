@@ -37,7 +37,6 @@ import Usa from '/public/img/dashboards/usa.png';
 // import MiniCalendar from 'components/calendar/MiniCalendar';
 import MiniStatistics from 'components/card/MiniStatistics';
 import IconBox from 'components/icons/IconBox';
-import { ChakraNextAvatar } from 'components/image/Avatar';
 import {
   MdAddTask,
   MdAttachMoney,
