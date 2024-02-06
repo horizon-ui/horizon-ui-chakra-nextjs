@@ -1,6 +1,6 @@
 {
   "name": "horizon-ui-chakra-nextjs",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
@@ -20,7 +20,7 @@
     "@types/react-dom": "^18.0.6",
     "apexcharts": "^3.35.2",
     "framer-motion": "^4.1.17",
-    "next": "^13.3.2",
+    "next": "14.0.2",
     "react": "18.2.0",
     "react-apexcharts": "^1.4.0",
     "react-calendar": "^3.7.0",
@@ -32,7 +32,7 @@
     "react-no-ssr": "^1.1.0",
     "stylis": "^4.1.1",
     "stylis-plugin-rtl": "2.0.2",
-    "typescript": "^4.7.4",
+    "typescript": "^4.9.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
