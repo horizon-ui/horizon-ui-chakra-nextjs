@@ -4,12 +4,12 @@ import {
   Flex,
   Icon,
   Link,
+  Image,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 // Custom components
 import Card from 'components/card/Card';
-import { Image } from 'components/image/Image';
 // Assets
 import { MdEdit } from 'react-icons/md';
 
@@ -17,7 +17,7 @@ export default function Project(props: {
   title: string;
   ranking: number | string;
   link: string;
-  image: string;
+  image: string | any;
   [x: string]: any;
 }) {
   const { title, ranking, link, image, ...rest } = props;
@@ -33,7 +33,7 @@ export default function Project(props: {
           alt=""
           h="80px"
           w="80px"
-          src={image}
+          src={image.src}
           borderRadius="8px"
           me="20px"
         />

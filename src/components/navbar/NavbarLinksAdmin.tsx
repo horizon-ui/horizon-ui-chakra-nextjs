@@ -6,6 +6,7 @@ import {
   Center,
   Flex,
   Icon,
+  Image,
   Link,
   Menu,
   MenuButton,
@@ -16,7 +17,6 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 // Custom Components
-import { Image } from 'components/image/Image';
 import { ItemContent } from 'components/menu/ItemContent';
 import { SearchBar } from 'components/navbar/searchBar/SearchBar';
 import { SidebarResponsive } from 'components/sidebar/Sidebar';
@@ -26,7 +26,11 @@ import { FaEthereum } from 'react-icons/fa';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import { MdInfoOutline, MdNotificationsNone } from 'react-icons/md';
 import routes from 'routes';
-export default function HeaderLinks(props: { secondary: boolean }) {
+export default function HeaderLinks(props: {
+  secondary: boolean;
+  onOpen: boolean | any;
+  fixed: boolean | any;
+}) {
   const { secondary } = props;
   const { colorMode, toggleColorMode } = useColorMode();
   // Chakra Color Mode
@@ -181,7 +185,7 @@ export default function HeaderLinks(props: { secondary: boolean }) {
           minW={{ base: 'unset' }}
           maxW={{ base: '360px', md: 'unset' }}
         >
-          <Image src={navImage} borderRadius="16px" mb="28px" alt="" />
+          <Image src={navImage.src} borderRadius="16px" mb="28px" alt="" />
           <Flex flexDirection="column">
             <Link w="100%" href="https://horizon-ui.com/pro">
               <Button w="100%" h="44px" mb="10px" variant="brand">

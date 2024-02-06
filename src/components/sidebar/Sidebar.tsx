@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 // chakra imports
 import {
@@ -11,54 +11,55 @@ import {
   DrawerOverlay,
   useDisclosure,
   DrawerContent,
-  DrawerCloseButton
-} from '@chakra-ui/react'
-import Content from 'components/sidebar/components/Content'
+  DrawerCloseButton,
+} from '@chakra-ui/react';
+import Content from 'components/sidebar/components/Content';
 import {
   renderThumb,
   renderTrack,
-  renderView
-} from 'components/scrollbar/Scrollbar'
-import { Scrollbars } from 'react-custom-scrollbars-2'
+  renderView,
+} from 'components/scrollbar/Scrollbar';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 // Assets
-import { IoMenuOutline } from 'react-icons/io5'
-import { IRoute } from 'types/navigation'
-import { isWindowAvailable } from 'utils/navigation'
+import { IoMenuOutline } from 'react-icons/io5';
+import { IRoute } from 'types/navigation';
+import { isWindowAvailable } from 'utils/navigation';
 
 interface SidebarResponsiveProps {
-  routes: IRoute[]
+  routes: IRoute[];
 }
 
 interface SidebarProps extends SidebarResponsiveProps {
-  [x: string]: any
+  [x: string]: any;
 }
 
-function Sidebar (props: SidebarProps) {
-  const { routes } = props
+function Sidebar(props: SidebarProps) {
+  const { routes } = props;
 
-  let variantChange = '0.2s linear'
+  let variantChange = '0.2s linear';
   let shadow = useColorModeValue(
     '14px 17px 40px 4px rgba(112, 144, 176, 0.08)',
-    'unset'
-  )
+    'unset',
+  );
   // Chakra Color Mode
-  let sidebarBg = useColorModeValue('white', 'navy.800')
-  let sidebarMargins = '0px'
+  let sidebarBg = useColorModeValue('white', 'navy.800');
+  let sidebarMargins = '0px';
 
   // SIDEBAR
   return (
-    <Box display={{ sm: 'none', xl: 'block' }} position='fixed' minH='100%'>
+    <Box display={{ sm: 'none', xl: 'block' }} position="fixed" minH="100%">
       <Box
         bg={sidebarBg}
         transition={variantChange}
-        w='300px'
-        h='100vh'
+        w="300px"
+        h="100vh"
         m={sidebarMargins}
-        minH='100%'
-        overflowX='hidden'
+        minH="100%"
+        overflowX="hidden"
         boxShadow={shadow}
       >
+        {/* @ts-expect-error */}
         <Scrollbars
           autoHide
           renderTrackVertical={renderTrack}
@@ -69,32 +70,32 @@ function Sidebar (props: SidebarProps) {
         </Scrollbars>
       </Box>
     </Box>
-  )
+  );
 }
 
 // FUNCTIONS
 
-export function SidebarResponsive (props: SidebarResponsiveProps) {
-  let sidebarBackgroundColor = useColorModeValue('white', 'navy.800')
-  let menuColor = useColorModeValue('gray.400', 'white')
+export function SidebarResponsive(props: SidebarResponsiveProps) {
+  let sidebarBackgroundColor = useColorModeValue('white', 'navy.800');
+  let menuColor = useColorModeValue('gray.400', 'white');
   // // SIDEBAR
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = React.useRef()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
-  const { routes } = props
+  const { routes } = props;
   // let isWindows = navigator.platform.startsWith("Win");
   //  BRAND
 
   return (
-    <Flex display={{ sm: 'flex', xl: 'none' }} alignItems='center'>
-      <Flex ref={btnRef} w='max-content' h='max-content' onClick={onOpen}>
+    <Flex display={{ sm: 'flex', xl: 'none' }} alignItems="center">
+      <Flex ref={btnRef} w="max-content" h="max-content" onClick={onOpen}>
         <Icon
           as={IoMenuOutline}
           color={menuColor}
-          my='auto'
-          w='20px'
-          h='20px'
-          me='10px'
+          my="auto"
+          w="20px"
+          h="20px"
+          me="10px"
           _hover={{ cursor: 'pointer' }}
         />
       </Flex>
@@ -109,14 +110,15 @@ export function SidebarResponsive (props: SidebarResponsiveProps) {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent w='285px' maxW='285px' bg={sidebarBackgroundColor}>
+        <DrawerContent w="285px" maxW="285px" bg={sidebarBackgroundColor}>
           <DrawerCloseButton
-            zIndex='3'
+            zIndex="3"
             onClick={onClose}
             _focus={{ boxShadow: 'none' }}
             _hover={{ boxShadow: 'none' }}
           />
-          <DrawerBody maxW='285px' px='0rem' pb='0'>
+          <DrawerBody maxW="285px" px="0rem" pb="0">
+            {/* @ts-expect-error */}
             <Scrollbars
               autoHide
               renderTrackVertical={renderTrack}
@@ -129,8 +131,8 @@ export function SidebarResponsive (props: SidebarResponsiveProps) {
         </DrawerContent>
       </Drawer>
     </Flex>
-  )
+  );
 }
 // PROPS
 
-export default Sidebar
+export default Sidebar;

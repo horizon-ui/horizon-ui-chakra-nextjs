@@ -1,21 +1,23 @@
-import dynamic from 'next/dist/shared/lib/dynamic'
-import { ChartProps } from './LineAreaChart'
+'use client';
+import dynamic from 'next/dynamic';
+// import Chart from 'react-apexcharts';
+const Chart = dynamic(() => import('react-apexcharts'), {
+  ssr: false,
+});
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
+const LineChart = (props: any) => {
+  const { chartData, chartOptions } = props;
 
-interface LineChartProps extends ChartProps {}
-
-export default function LineChart ({
-  chartOptions,
-  chartData
-}: LineChartProps) {
   return (
+    // @ts-expect-error
     <Chart
       options={chartOptions}
+      type="line"
+      width="100%"
+      height="100%"
       series={chartData}
-      type='line'
-      width='100%'
-      height='100%'
     />
-  )
-}
+  );
+};
+
+export default LineChart;
