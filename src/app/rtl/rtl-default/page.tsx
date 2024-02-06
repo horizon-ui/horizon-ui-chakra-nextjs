@@ -23,6 +23,7 @@
 
 // Chakra imports
 import {
+  Avatar,
   Box,
   Flex,
   Icon,
@@ -36,7 +37,6 @@ import Usa from '/public/img/dashboards/usa.png';
 // import MiniCalendar from 'components/calendar/MiniCalendar';
 import MiniStatistics from 'components/card/MiniStatistics';
 import IconBox from 'components/icons/IconBox';
-import { ChakraNextAvatar } from 'components/image/Avatar';
 import {
   MdAddTask,
   MdAttachMoney,
@@ -97,7 +97,7 @@ export default function UserReports() {
         <MiniStatistics
           startContent={
             <Box height={'56px'} width={'56px'}>
-              <ChakraNextAvatar src={Usa} height={'56px'} width={'56px'} />
+              <Avatar src={Usa.src} height={'56px'} width={'56px'} />
             </Box>
           }
           endContent={

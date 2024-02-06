@@ -1,4 +1,10 @@
-# Changelog
+
+## [2.1.0] 2023-11-10
+
+### Bug fix - Build error due to Types
+
+- Updated types
+- Updated charts 
 ## [2.0.0] 2023-09-13 
 
 ### Big update - NextJS 13 Update
