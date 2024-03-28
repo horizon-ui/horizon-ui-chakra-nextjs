@@ -24,9 +24,9 @@ export default function NFT(props: {
   author: string;
   bidders: string[] | any[];
   download: string;
-  currentbid: string | number;
+  earn: string | number;
 }) {
-  const { image, name, author, bidders, download, currentbid } = props;
+  const { image, name, author, bidders, download, earn } = props;
   const [like, setLike] = useState(false);
   const textColor = useColorModeValue('navy.700', 'white');
   const textColorBid = useColorModeValue('brand.500', 'white');
@@ -139,7 +139,7 @@ export default function NFT(props: {
             mt="25px"
           >
             <Text fontWeight="700" fontSize="sm" color={textColorBid}>
-              Current Bid: {currentbid}
+              Earn {earn} 99$ Per/Month
             </Text>
             <Link
               href={download}

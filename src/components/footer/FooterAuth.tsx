@@ -39,7 +39,7 @@ export default function Footer(props: { [x: string]: any }) {
         {' '}
         &copy; {new Date().getFullYear()}
         <Text as="span" fontWeight="500" ms="4px">
-          Horizon UI. All Rights Reserved. Made with love by
+          Blockcity Marketplace 
           <Link
             mx="3px"
             color={textColor}
@@ -47,7 +47,7 @@ export default function Footer(props: { [x: string]: any }) {
             target="_blank"
             fontWeight="700"
           >
-            Simmmple!
+          
           </Link>
         </Text>
       </Text>
@@ -61,7 +61,7 @@ export default function Footer(props: { [x: string]: any }) {
           <Link
             fontWeight="500"
             color={linkColor}
-            href="mailto:hello@simmmple.com"
+            href="mailto:hello@blockcity.fi"
           >
             Support
           </Link>
