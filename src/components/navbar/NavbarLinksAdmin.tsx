@@ -99,7 +99,7 @@ export default function HeaderLinks(props: {
           1,924
           <Text as="span" display={{ base: 'none', md: 'unset' }}>
             {' '}
-            ETH
+            STX
           </Text>
         </Text>
       </Flex>
@@ -189,7 +189,7 @@ export default function HeaderLinks(props: {
           <Flex flexDirection="column">
             <Link w="100%" href="https://horizon-ui.com/pro">
               <Button w="100%" h="44px" mb="10px" variant="brand">
-                Buy Horizon UI PRO
+                Blockcity
               </Button>
             </Link>
             <Link
@@ -218,7 +218,7 @@ export default function HeaderLinks(props: {
                 color={textColor}
                 bg="transparent"
               >
-                Try Horizon Free
+                
               </Button>
             </Link>
           </Flex>
@@ -297,7 +297,7 @@ export default function HeaderLinks(props: {
               borderRadius="8px"
               px="14px"
             >
-              <Text fontSize="sm">Newsletter Settings</Text>
+              <Text fontSize="sm"></Text>
             </MenuItem>
             <MenuItem
               _hover={{ bg: 'none' }}

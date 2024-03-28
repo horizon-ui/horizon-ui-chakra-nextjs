@@ -1,41 +1,43 @@
+import { color } from "@chakra-ui/styled-system";
 import { mode, StyleFunctionProps } from "@chakra-ui/theme-tools";
+
 export const globalStyles = {
   colors: {
     brand: {
-      100: "#E9E3FF",
-      200: "#422AFB",
-      300: "#422AFB",
-      400: "#7551FF",
-      500: "#422AFB",
-      600: "#3311DB",
-      700: "#02044A",
-      800: "#190793",
-      900: "#11047A",
+      100: "#df9d41",
+      200: "#df9d41", // Changed to the mix color
+      300: "#df9d41", // Changed to the mix color
+      400: "#df9d41", // Changed to the mix color
+      500: "#df9d41", // Changed to the mix color
+      600: "#df9d41", // Changed to the mix color
+      700: "#0e0f11", // Changed to the mix color
+      800: "#0e0f11", // Changed to the mix color
+      900: "#0e0f11", // Changed to the mix color
     },
     brandScheme: {
       100: "#E9E3FF",
-      200: "#7551FF",
-      300: "#7551FF",
-      400: "#7551FF",
-      500: "#422AFB",
-      600: "#3311DB",
-      700: "#02044A",
-      800: "#190793",
-      900: "#02044A",
+      200: "#df9d41", // Changed to the mix color
+      300: "#df9d41", // Changed to the mix color
+      400: "#df9d41", // Changed to the mix color
+      500: "#df9d41", // Changed to the mix color
+      600: "#df9d41", // Changed to the mix color
+      700: "#0e0f11", // Changed to the mix color
+      800: "#0e0f11", // Changed to the mix color
+      900: "#0e0f11", // Changed to the mix color
     },
     brandTabs: {
       100: "#E9E3FF",
-      200: "#422AFB",
-      300: "#422AFB",
-      400: "#422AFB",
-      500: "#422AFB",
-      600: "#3311DB",
-      700: "#02044A",
-      800: "#190793",
-      900: "#02044A",
+      200: "#df9d41", // Changed to the mix color
+      300: "#df9d41", // Changed to the mix color
+      400: "#df9d41", // Changed to the mix color
+      500: "#df9d41", // Changed to the mix color
+      600: "#df9d41", // Changed to the mix color
+      700: "#0e0f11", // Changed to the mix color
+      800: "#0e0f11", // Changed to the mix color
+      900: "#0e0f11", // Changed to the mix color
     },
     secondaryGray: {
-      100: "#E0E5F2",
+      100: "#df9d41",
       200: "#E1E9F8",
       300: "#F4F7FE",
       400: "#E9EDF7",
@@ -51,8 +53,8 @@ export const globalStyles = {
       600: "#E31A1A",
     },
     blue: {
-      50: "#EFF4FB",
-      500: "#3965FF",
+      50: "#df9d41", // Changed to the mix color
+      500: "#df9d41", // Changed to the mix color
     },
     orange: {
       100: "#FFF6DA",
@@ -63,16 +65,16 @@ export const globalStyles = {
       500: "#01B574",
     },
     navy: {
-      50: "#d0dcfb",
-      100: "#aac0fe",
-      200: "#a3b9f8",
-      300: "#728fea",
-      400: "#3652ba",
-      500: "#1b3bbb",
-      600: "#24388a",
-      700: "#1B254B",
-      800: "#111c44",
-      900: "#0b1437",
+      50: "#df9d41", // Changed to the mix color
+      100: "#df9d41", // Changed to the mix color
+      200: "#df9d41", // Changed to the mix color
+      300: "#df9d41", // Changed to the mix color
+      400: "#df9d41", // Changed to the mix color
+      500: "#df9d41", // Changed to the mix color
+      600: "#df9d41", // Changed to the mix color
+      700: "#0e0f11", // Changed to the mix color
+      800: "#0e0f11", // Changed to the mix color
+      900: "#0e0f11", // Changed to the mix color
     },
     gray: {
       100: "#FAFCFE",
@@ -85,6 +87,7 @@ export const globalStyles = {
         bg: mode("secondaryGray.300", "navy.900")(props),
         fontFamily: "DM Sans",
         letterSpacing: "-0.5px",
+        color: mode("orange.500", "orange.500")(props), // Text color set to orange
       },
       input: {
         color: "gray.700",

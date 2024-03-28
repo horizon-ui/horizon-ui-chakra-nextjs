@@ -96,7 +96,7 @@ export default function NftMarketplace() {
                   fontWeight="500"
                   me={{ base: '34px', md: '44px' }}
                 >
-                  Art
+                  SIP-009
                 </Link>
                 <Link
                   href="#music"
@@ -104,7 +104,7 @@ export default function NftMarketplace() {
                   fontWeight="500"
                   me={{ base: '34px', md: '44px' }}
                 >
-                  Music
+                  BRC-20
                 </Link>
                 <Link
                   href="#collectibles"
@@ -112,10 +112,10 @@ export default function NftMarketplace() {
                   fontWeight="500"
                   me={{ base: '34px', md: '44px' }}
                 >
-                  Collectibles
+                  STX-20
                 </Link>
                 <Link href="#sports" color={textColorBrand} fontWeight="500">
-                  Sports
+                  Runes
                 </Link>
               </Flex>
             </Flex>
@@ -135,8 +135,7 @@ export default function NftMarketplace() {
                 ]}
                 image={Nft1}
                 earn=""
-                download="#"
-              />
+                download="#" collection={''} owner={''} highestBid={''} tokenID={''} tokenStandard={''} chain={''} lastUpdated={''}              />
               <NFT
                 name="ETH AI Brain"
                 author="By Nick Wilson"
@@ -152,8 +151,7 @@ export default function NftMarketplace() {
                 ]}
                 image={Nft2}
                 earn=""
-                download="#"
-              />
+                download="#" collection={''} owner={''} highestBid={''} tokenID={''} tokenStandard={''} chain={''} lastUpdated={''}              />
               <NFT
                 name="Mesh Gradients "
                 author="By Will Smith"
@@ -169,8 +167,7 @@ export default function NftMarketplace() {
                 ]}
                 image={Nft3}
                 earn=""
-                download="#"
-              />
+                download="#" collection={''} owner={''} highestBid={''} tokenID={''} tokenStandard={''} chain={''} lastUpdated={''}              />
             </SimpleGrid>
             <Text
               mt="45px"
@@ -202,8 +199,7 @@ export default function NftMarketplace() {
                 ]}
                 image={Nft4}
                 earn=""
-                download="#"
-                
+                download="#" collection={''} owner={''} highestBid={''} tokenID={''} tokenStandard={''} chain={''} lastUpdated={''}                
               />
               <NFT
                 name="Colorful Heaven"
@@ -220,8 +216,7 @@ export default function NftMarketplace() {
                 ]}
                 image={Nft5}
                 earn=""
-                download="#"
-              />
+                download="#" collection={''} owner={''} highestBid={''} tokenID={''} tokenStandard={''} chain={''} lastUpdated={''}              />
               <NFT
                 name="3D Cubes Art"
                 author="By Manny Gates"
@@ -237,8 +232,7 @@ export default function NftMarketplace() {
                 ]}
                 image={Nft6}
                 earn=""
-                download="#"
-              />
+                download="#" collection={''} owner={''} highestBid={''} tokenID={''} tokenStandard={''} chain={''} lastUpdated={''}              />
             </SimpleGrid>
           </Flex>
         </Flex>

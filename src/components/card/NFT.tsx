@@ -11,6 +11,7 @@ import {
   Text,
   useColorModeValue,
   AspectRatio,
+  Select,
 } from '@chakra-ui/react';
 // Custom components
 import Card from 'components/card/Card';
@@ -25,13 +26,51 @@ export default function NFT(props: {
   bidders: string[] | any[];
   download: string;
   earn: string | number;
+  collection: string;
+  owner: string;
+  highestBid: string;
+  tokenID: string;
+  tokenStandard: string;
+  chain: string;
+  lastUpdated: string;
 }) {
-  const { image, name, author, bidders, download, earn } = props;
+  const {
+    image,
+    name,
+    author,
+    bidders,
+    download,
+    earn,
+    collection,
+    owner,
+    highestBid,
+    tokenID,
+    tokenStandard,
+    chain,
+    lastUpdated,
+  } = props;
   const [like, setLike] = useState(false);
   const textColor = useColorModeValue('navy.700', 'white');
   const textColorBid = useColorModeValue('brand.500', 'white');
   return (
     <Card p="20px">
+      <Flex justify="flex-end" position="sticky" top="0" zIndex="1" mb="20px">
+        <Select
+          variant="outline"
+          w="200px"
+          fontSize="sm"
+          borderColor="brand.500"
+          color="brand.500"
+        >
+          <option value="mostPopular">Most Popular</option>
+          <option value="mostViewed">Most Viewed</option>
+          <option value="higherToLowerPrice">Higher to Lower Price</option>
+          <option value="lowerToHigherPrice">Lower to Higher Price</option>
+          <option value="biggestBid">Biggest Bid</option>
+          <option value="smallestBid">Smallest Bid</option>
+        </Select>
+      </Flex>
+      {/* NFT card */}
       <Flex direction={{ base: 'column' }} justify="center">
         <Box mb={{ base: '20px', '2xl': '20px' }} position="relative">
           <AspectRatio ratio={7 / 5}>
@@ -166,6 +205,41 @@ export default function NFT(props: {
           </Flex>
         </Flex>
       </Flex>
+      {/* More details section */}
+      <Box mt="20px">
+        <Text fontSize="sm" fontWeight="bold" color={textColor}>
+          More Details:
+        </Text>
+        <Flex direction="column" mt="10px">
+          <Box>
+            <Text fontSize="xs" color="secondaryGray.600">
+              Collection: {collection}
+            </Text>
+            <Text fontSize="xs" color="secondaryGray.600">
+              Owner: {owner}
+            </Text>
+            <Text fontSize="xs" color="secondaryGray.600">
+              Highest Bid: {highestBid}
+            </Text>
+          </Box>
+          <Box>
+            <Text fontSize="xs" color="secondaryGray.600">
+              Token ID: {tokenID}
+            </Text>
+            <Text fontSize="xs" color="secondaryGray.600">
+              Token Standard: {tokenStandard}
+            </Text>
+            <Text fontSize="xs" color="secondaryGray.600">
+              Chain: {chain}
+            </Text>
+          </Box>
+          <Box>
+            <Text fontSize="xs" color="secondaryGray.600">
+              Last Updated: {lastUpdated}
+            </Text>
+          </Box>
+        </Flex>
+      </Box>
     </Card>
   );
 }

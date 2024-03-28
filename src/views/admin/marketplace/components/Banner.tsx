@@ -32,7 +32,7 @@ export default function Banner () {
         fontWeight='700'
         lineHeight={{ base: '32px', md: '42px' }}
       >
-        Discover, collect, and sell extraordinary NFTs
+        Discover, collect, and sell digital assests on Bitcoin
       </Text>
       <Text
         fontSize='md'
@@ -49,8 +49,7 @@ export default function Banner () {
         mb='40px'
         lineHeight='28px'
       >
-        Enter in this creative world. Discover now the latest NFTs or start
-        creating your own!
+        Enter in this creative world. Discover now the latest NFTs and Ordinals!
       </Text>
       <Flex align='center'>
         <Button
@@ -69,7 +68,7 @@ export default function Banner () {
         </Button>
         <Link>
           <Text color='white' fontSize='sm' fontWeight='500'>
-            Watch video
+            Explore
           </Text>
         </Link>
       </Flex>
