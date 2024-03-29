@@ -41,7 +41,7 @@ import HistoryItem from 'views/admin/marketplace/components/HistoryItem';
 import NFT from 'components/card/NFT';
 import Card from 'components/card/Card';
 import tableDataTopCreators from 'views/admin/marketplace/variables/tableDataTopCreators';
-
+import Banner from 'views/admin/marketplace/components/Banner';
 // Assets
 import Nft1 from 'img/nfts/Nft1.png';
 import Nft2 from 'img/nfts/Nft2.png';
@@ -72,7 +72,8 @@ export default function NftMarketplace() {
           flexDirection="column"
           gridArea={{ xl: '1 / 1 / 2 / 3', '2xl': '1 / 1 / 2 / 2' }}
         >
-          {/* <Banner /> */}
+           <Banner /> 
+
           <Flex direction="column">
             <Flex
               mt="45px"

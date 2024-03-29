@@ -9,7 +9,7 @@ const PieChart = (props: any) => {
   const { chartData, chartOptions } = props;
 
   return (
-    // @ts-expect-error
+   
     <Chart
       options={chartOptions}
       type="pie"
@@ -17,7 +17,7 @@ const PieChart = (props: any) => {
       height="100%"
       series={chartData}
     />
-  );
+);
 };
 
 export default PieChart;
