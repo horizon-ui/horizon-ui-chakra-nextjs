@@ -57,7 +57,7 @@ export default function NFT(props: {
       <Flex justify="flex-end" position="sticky" top="0" zIndex="1" mb="20px">
         <Select
           variant="outline"
-          w="200px"
+          w="150px"
           fontSize="sm"
           borderColor="brand.500"
           color="brand.500"

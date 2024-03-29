@@ -53,11 +53,11 @@ export default function Banner () {
       </Text>
       <Flex align='center'>
         <Button
-          bg='white'
-          color='black'
+          bg='orange'
+          color='white'
           _hover={{ bg: 'whiteAlpha.900' }}
-          _active={{ bg: 'white' }}
-          _focus={{ bg: 'white' }}
+          _active={{ bg: 'orange' }}
+          _focus={{ bg: 'blue' }}
           fontWeight='500'
           fontSize='14px'
           py='20px'
@@ -67,7 +67,7 @@ export default function Banner () {
           Discover now
         </Button>
         <Link>
-          <Text color='white' fontSize='sm' fontWeight='500'>
+          <Text color='orange' fontSize='sm' fontWeight='500'>
             Explore
           </Text>
         </Link>

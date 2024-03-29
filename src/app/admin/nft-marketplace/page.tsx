@@ -82,7 +82,7 @@ export default function NftMarketplace() {
               direction={{ base: 'column', md: 'row' }}
               align={{ base: 'start', md: 'center' }}
             >
-              <Text color={textColor} fontSize="2xl" ms="24px" fontWeight="700">
+              <Text color="#756bff"fontSize="2xl" ms="24px" fontWeight="700">
                 Trending NFTs
               </Text>
               <Flex
