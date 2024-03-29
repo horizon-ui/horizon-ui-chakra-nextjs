@@ -26,7 +26,7 @@ export const globalStyles = {
       900: "#0e0f11", // Changed to the mix color
     },
     brandTabs: {
-      100: "#E9E3FF",
+      100: "#df9d41",
       200: "#df9d41", // Changed to the mix color
       300: "#df9d41", // Changed to the mix color
       400: "#df9d41", // Changed to the mix color
@@ -48,9 +48,9 @@ export const globalStyles = {
       900: "#1B2559",
     },
     red: {
-      100: "#FEEFEE",
-      500: "#EE5D50",
-      600: "#E31A1A",
+      100: "#df9d41",
+      500: "#df9d41",
+      600: "#756bff",
     },
     blue: {
       50: "#df9d41", // Changed to the mix color
@@ -61,8 +61,8 @@ export const globalStyles = {
       500: "#FFB547",
     },
     green: {
-      100: "#E6FAF5",
-      500: "#01B574",
+      100: "#756bff",
+      500: "#df9d41",
     },
     navy: {
       50: "#df9d41", // Changed to the mix color
