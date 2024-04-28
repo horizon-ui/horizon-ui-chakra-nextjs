@@ -72,12 +72,12 @@ export default function TopCreatorTable(props: { tableData: any }) {
           fontSize={{ sm: '10px', lg: '12px' }}
           color="gray.400"
         >
-          ARTWORKS
+          Contributions
         </Text>
       ),
       cell: (info) => (
         <Text color={textColorSecondary} fontSize="sm" fontWeight="500">
-          {info.getValue()}
+          {info.getValue()} lb
         </Text>
       ),
     }),
@@ -134,7 +134,7 @@ export default function TopCreatorTable(props: { tableData: any }) {
         boxShadow="0px 40px 58px -20px rgba(112, 144, 176, 0.26)"
       >
         <Text color={textColor} fontSize="xl" fontWeight="600">
-          Top Creators
+          Top Contributors
         </Text>
         <Button variant="action">See all</Button>
       </Flex>
