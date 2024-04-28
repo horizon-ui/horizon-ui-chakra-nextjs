@@ -58,7 +58,7 @@ export default function RTLLayout(props: RTLLayoutProps) {
               <Box>
                 <Navbar
                   onOpen={onOpen}
-                  logoText={'Horizon UI Dashboard'}
+                  logoText={'TOMATO AI Dashboard'}
                   brandText={getActiveRoute(routes)}
                   secondary={getActiveNavbar(routes)}
                   message={getActiveNavbarText(routes)}

@@ -148,7 +148,7 @@ export default function HeaderLinks(props: {
               borderRadius="8px"
               mb="10px"
             >
-              <ItemContent info="Horizon UI Dashboard PRO" />
+              {/* <ItemContent info="Horizon UI Dashboard PRO" /> */}
             </MenuItem>
             <MenuItem
               _hover={{ bg: 'none' }}
@@ -157,7 +157,7 @@ export default function HeaderLinks(props: {
               borderRadius="8px"
               mb="10px"
             >
-              <ItemContent info="Horizon Design System Free" />
+              {/* <ItemContent info="Horizon Design System Free" /> */}
             </MenuItem>
           </Flex>
         </MenuList>
@@ -185,14 +185,14 @@ export default function HeaderLinks(props: {
           minW={{ base: 'unset' }}
           maxW={{ base: '360px', md: 'unset' }}
         >
-          <Image src={navImage.src} borderRadius="16px" mb="28px" alt="" />
+          {/* <Image src={navImage.src} borderRadius="16px" mb="28px" alt="" /> */}
           <Flex flexDirection="column">
-            <Link w="100%" href="https://horizon-ui.com/pro">
+            {/* <Link w="100%" href="https://horizon-ui.com/pro">
               <Button w="100%" h="44px" mb="10px" variant="brand">
                 Buy Horizon UI PRO
               </Button>
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               w="100%"
               href="https://horizon-ui.com/documentation/docs/introduction"
             >
@@ -206,8 +206,8 @@ export default function HeaderLinks(props: {
               >
                 See Documentation
               </Button>
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               w="100%"
               href="https://github.com/horizon-ui/horizon-ui-chakra-nextjs"
             >
@@ -220,7 +220,7 @@ export default function HeaderLinks(props: {
               >
                 Try Horizon Free
               </Button>
-            </Link>
+            </Link> */}
           </Flex>
         </MenuList>
       </Menu>

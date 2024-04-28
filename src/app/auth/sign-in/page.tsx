@@ -67,8 +67,10 @@ export default function SignIn() {
   );
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
+
+
   return (
-    <DefaultAuthLayout illustrationBackground={'/img/auth/auth.png'}>
+    <DefaultAuthLayout illustrationBackground={'/img/auth/tomatoooo.png'}>
       <Flex
         maxW={{ base: '100%', md: 'max-content' }}
         w="100%"
@@ -209,16 +211,18 @@ export default function SignIn() {
                 </Text>
               </Link>
             </Flex>
-            <Button
-              fontSize="sm"
-              variant="brand"
-              fontWeight="500"
-              w="100%"
-              h="50"
-              mb="24px"
-            >
-              Sign In
-            </Button>
+            <Link href="/admin/default">
+              <Button
+                fontSize="sm"
+                variant="brand"
+                fontWeight="500"
+                w="100%"
+                h="50px"  // Ensure the height unit is specified correctly
+                mb="24px"
+              >
+                Sign In
+              </Button>
+            </Link>
           </FormControl>
           <Flex
             flexDirection="column"

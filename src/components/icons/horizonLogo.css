@@ -1,0 +1,13 @@
+.zoomed-logo {
+    width: 200px;
+    /* Set the desired width */
+    height: auto;
+    /* Let the height adjust proportionally */
+    transition: transform 0.3s ease;
+    /* Add a smooth transition */
+}
+
+.zoomed-logo:hover {
+    transform: scale(1.2);
+    /* Zoom in by 20% on hover */
+}

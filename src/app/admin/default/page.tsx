@@ -56,11 +56,11 @@ import Usa from 'img/dashboards/usa.png';
 export default function Default() {
   // Chakra Color Mode
 
-  const brandColor = useColorModeValue('brand.500', 'white');
-  const boxBg = useColorModeValue('secondaryGray.300', 'whiteAlpha.100');
+  const brandColor = useColorModeValue('tomato', 'tomato');
+  const boxBg = useColorModeValue('tomato.700', 'whiteAlpha.100');
 
   return (
-    <Box pt={{ base: '130px', md: '80px', xl: '80px' }}>
+    <Box pt={{ base: '150px', md: '80px', xl: '80px' }}>
       <SimpleGrid
         columns={{ base: 1, md: 2, lg: 3, '2xl': 6 }}
         gap="20px"
@@ -69,30 +69,30 @@ export default function Default() {
         <MiniStatistics
           startContent={
             <IconBox
-              w="56px"
-              h="56px"
+              w="64px"
+              h="64px"
               bg={boxBg}
               icon={
                 <Icon w="32px" h="32px" as={MdBarChart} color={brandColor} />
               }
             />
           }
-          name="Earnings"
-          value="$350.4"
+          name="Money Raised"
+          value="$3.2M"
         />
         <MiniStatistics
           startContent={
             <IconBox
-              w="56px"
-              h="56px"
+              w="64px"
+              h="64px"
               bg={boxBg}
               icon={
                 <Icon w="32px" h="32px" as={MdAttachMoney} color={brandColor} />
               }
             />
           }
-          name="Spend this month"
-          value="$642.39"
+          name="Spending this month"
+          value="$2000"
         />
         <MiniStatistics growth="+23%" name="Sales" value="$574.34" />
         <MiniStatistics
@@ -122,8 +122,8 @@ export default function Default() {
         <MiniStatistics
           startContent={
             <IconBox
-              w="56px"
-              h="56px"
+              w="64px"
+              h="64px"
               bg="linear-gradient(90deg, #4481EB 0%, #04BEFE 100%)"
               icon={<Icon w="28px" h="28px" as={MdAddTask} color="white" />}
             />
@@ -134,8 +134,8 @@ export default function Default() {
         <MiniStatistics
           startContent={
             <IconBox
-              w="56px"
-              h="56px"
+              w="64px"
+              h="64px"
               bg={boxBg}
               icon={
                 <Icon w="32px" h="32px" as={MdFileCopy} color={brandColor} />
@@ -152,16 +152,14 @@ export default function Default() {
         <WeeklyRevenue />
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap="20px" mb="20px">
-        <CheckTable tableData={tableDataCheck} />
+      <ComplexTable tableData={tableDataComplex} />
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
           <DailyTraffic />
-          <PieCard />
+          <Tasks />
         </SimpleGrid>
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap="20px" mb="20px">
-        <ComplexTable tableData={tableDataComplex} />
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
-          <Tasks />
           {/* <MiniCalendar h="100%" minW="100%" selectRange={false} /> */}
         </SimpleGrid>
       </SimpleGrid>
