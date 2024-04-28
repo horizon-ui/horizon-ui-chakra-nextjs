@@ -82,7 +82,7 @@ export const barChartOptionsDailyTraffic: ApexGeneric = {
         [
           {
             offset: 0,
-            color: "#4318FF",
+            color: "tomato",
             opacity: 1,
           },
           {
@@ -291,12 +291,12 @@ export const barChartOptionsConsumption: ApexGeneric = {
   },
   fill: {
     type: "solid",
-    colors: ["#5E37FF", "#6AD2FF", "#E1E9F8"],
+    colors: ["#dda15e", "#84a98c", "#ffe8d6"],
   },
   legend: {
     show: false,
   },
-  colors: ["#5E37FF", "#6AD2FF", "#E1E9F8"],
+  colors: ["#008000", "#D2B48C", "#FF0000"],
   dataLabels: {
     enabled: false,
   },
@@ -373,10 +373,10 @@ export const lineChartOptionsTotalSpent: ApexOptions = {
       left: 0,
       blur: 10,
       opacity: 0.1,
-      color: "#4318FF",
+      color: "#D2140A",
     },
   },
-  colors: ["#4318FF", "#39B8FF"],
+  colors: ['#1DBD88', "#22B2BA"],
   markers: {
     size: 0,
     colors: "white",

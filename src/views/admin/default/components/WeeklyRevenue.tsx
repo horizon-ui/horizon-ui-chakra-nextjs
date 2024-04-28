@@ -42,7 +42,7 @@ export default function WeeklyRevenue (props: { [x: string]: any }) {
           fontWeight='700'
           lineHeight='100%'
         >
-          Weekly Revenue
+         Week by Lbs
         </Text>
         <Button
           alignItems='center'

@@ -67,7 +67,7 @@ export default function TotalSpent(props: { [x: string]: any }) {
 					</Text>
 					<Flex align='center' mb='20px'>
 						<Text color='secondaryGray.600' fontSize='sm' fontWeight='500' mt='4px' me='12px'>
-							Total Spent
+							Total Recieved
 						</Text>
 						<Flex align='center'>
 							<Icon as={RiArrowUpSFill} color='green.500' me='2px' mt='2px' />

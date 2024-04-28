@@ -94,9 +94,20 @@ export default function Default() {
           name="Spending this month"
           value="$2000"
         />
-        <MiniStatistics growth="+23%" name="Sales" value="$574.34" />
+        <MiniStatistics    
+        startContent={      
+        <IconBox
+              w="64px"
+              h="64px"
+              bg={boxBg}
+              icon={
+                <Icon w="32px" h="32px" as={MdAttachMoney} color={brandColor} />
+              }
+            />
+        }
+        growth="+23%" name="Sales" value="$574.34" />
         <MiniStatistics
-          endContent={
+          startContent={
             <Flex me="-16px" mt="10px">
               <FormLabel htmlFor="balance">
                 <Box boxSize={'12'}>
@@ -124,7 +135,7 @@ export default function Default() {
             <IconBox
               w="64px"
               h="64px"
-              bg="linear-gradient(90deg, #4481EB 0%, #04BEFE 100%)"
+              bg="linear-gradient(90deg, tomato 20%, red 100%)"
               icon={<Icon w="28px" h="28px" as={MdAddTask} color="white" />}
             />
           }

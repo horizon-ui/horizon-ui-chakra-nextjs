@@ -19,7 +19,7 @@ export default function WeeklyRevenue(props: { [x: string]: any }) {
 		<Card alignItems='center' flexDirection='column' w='100%' {...rest}>
 			<Flex align='center' w='100%' px='15px' py='10px'>
 				<Text me='auto' color={textColor} fontSize='xl' fontWeight='700' lineHeight='100%'>
-					Weekly Revenue
+					Week By Lbs
 				</Text>
 				<Button
 					alignItems='center'
