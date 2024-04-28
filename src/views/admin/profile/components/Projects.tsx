@@ -15,7 +15,7 @@ export default function Projects (props: { [x: string]: any }) {
   const textColorSecondary = 'gray.400'
   const cardShadow = useColorModeValue(
     '0px 18px 40px rgba(112, 144, 176, 0.12)',
-    'unset'
+    'tomato'
   )
   return (
     <Card mb={{ base: '0px', '2xl': '20px' }} {...rest}>

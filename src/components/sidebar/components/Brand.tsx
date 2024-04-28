@@ -10,9 +10,9 @@ export function SidebarBrand() {
 	let logoColor = useColorModeValue('navy.700', 'white');
 
 	return (
-		<Flex alignItems='center' flexDirection='column'>
-			<HorizonLogo />
-			<HSeparator mb='20px' />
+		<Flex alignItems='center' flexDirection='column' >
+			{/* <HorizonLogo /> */}
+			<HSeparator mb='px' />
 		</Flex>
 	);
 }

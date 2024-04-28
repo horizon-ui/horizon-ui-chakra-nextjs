@@ -7,28 +7,29 @@ type RowObj = {
 
 const tableDataComplex: RowObj[] = [
 	{
-		name: 'TOMATO AI PRO',
+		name: "Red Cross Foundation",
 		progress: 75.5,
-		status: 'Approved',
-		date: '12 Jan 2021'
+		status: "Approved",
+		date: "12 Jan 2024",
 	},
 	{
-		name: 'TOMATO AI Free',
+		name: "UNICEF",
 		progress: 25.5,
-		status: 'Disable',
-		date: '21 Feb 2021'
+		status: "Disable",
+		date: "21 Feb 2024",
 	},
 	{
-		name: 'Weekly Update',
+		name: "Doctors Without Borders",
 		progress: 90,
-		status: 'Error',
-		date: '13 Mar 2021'
+		status: "Approved",
+		date: "13 Mar 2024",
 	},
 	{
-		name: 'Marketplace6',
+		name: "Greenpeace",
 		progress: 50.5,
-		status: 'Approved',
-		date: '24 Oct 2022'
-	}
+		status: "Approved",
+		date: "24 Oct 2023",
+	},
 ];
+
 export default tableDataComplex;

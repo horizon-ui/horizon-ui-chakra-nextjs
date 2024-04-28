@@ -7,28 +7,28 @@ type RowObj = {
 
 const tableDataColumns: RowObj[] = [
 	{
-		name: 'TOMATO AI PRO',
-		quantity: 2458,
-		progress: '17.5%',
-		date: '12 Jan 2021',
+		name: "Apple Inc. - Tim Cook",
+		quantity: 1000000, // $1,000,000
+		progress: "17.5%",
+		date: "12 Jan 2021",
 	},
 	{
-		name: 'TOMATO AI Free',
-		quantity: 1485,
-		progress: '10.8%',
-		date: '21 Feb 2021',
+		name: "Amazon.com Inc. - Jeff Bezos",
+		quantity: 750000, // $750,000
+		progress: "10.8%",
+		date: "21 Feb 2021",
 	},
 	{
-		name: 'Weekly Update',
-		quantity: 1024,
-		progress: '21.3%',
-		date: '13 Mar 2021',
+		name: "Microsoft Corporation - Satya Nadella",
+		quantity: 500000, // $500,000
+		progress: "21.3%",
+		date: "13 Mar 2021",
 	},
 	{
-		name: 'Venus 3D Asset',
-		quantity: 858,
-		progress: '31.5%',
-		date: '24 Jan 2021',
+		name: "Google LLC - Sundar Pichai",
+		quantity: 250000, // $250,000
+		progress: "31.5%",
+		date: "24 Jan 2021",
 	},
 ];
 

@@ -470,9 +470,10 @@ export const SpotifyLogo = createIcon({
 export const HorizonLogo = () => (
   
   <img
-    src='/img/auth/image.png'
+    src='/img/auth/tomatoAI.png'
     alt='logo'
-    width={70}
+    width='340px'
+    my='32+px'
   />
 );
 

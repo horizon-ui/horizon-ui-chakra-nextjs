@@ -28,18 +28,18 @@ export default function Banner(props: { used: number; total: number; [x: string]
 				bg={box}
 			/>
 			<Text color={textColorPrimary} fontWeight='bold' fontSize='2xl' mt='10px'>
-				Your storage
+				Goal For End of Month
 			</Text>
 			<Text color={textColorSecondary} fontSize='md' maxW={{ base: '100%', xl: '80%', '3xl': '60%' }} mx='auto'>
-				Supervise your drive space in the easiest way
+				Track your food picked up and delivered to the food bank
 			</Text>
 			<Box w='100%' mt='auto'>
 				<Flex w='100%' justify='space-between' mb='10px'>
 					<Text color={textColorSecondary} fontSize='sm' maxW='40%'>
-						{used} GB
+						{used} LBS
 					</Text>
 					<Text color={textColorSecondary} fontSize='sm' maxW='40%'>
-						{total} GB
+						{total} LBS
 					</Text>
 				</Flex>
 				<Progress alignItems='start' colorScheme='brandScheme' value={used / total * 100} w='100%' />

@@ -25,15 +25,15 @@ export default function Notifications(props: { [x: string]: any }) {
 				id='1'
 				label='Item update notifications'
 			/>
-			<SwitchField reversed={true} fontSize='sm' mb='20px' id='2' label='Item comment notifications' />
-			<SwitchField reversed={true} fontSize='sm' mb='20px' id='3' label='Buyer review notifications' />
-			<SwitchField reversed={true} fontSize='sm' mb='20px' id='4' label='Rating reminders notifications' />
-			<SwitchField reversed={true} fontSize='sm' mb='20px' id='5' label='Meetups near you notifications' />
-			<SwitchField reversed={true} fontSize='sm' mb='20px' id='6' label='Company news notifications' />
-			<SwitchField reversed={true} fontSize='sm' mb='20px' id='7' label='New launches and projects' />
-			<SwitchField reversed={true} fontSize='sm' mb='20px' id='8' label='Monthly product changes' />
-			<SwitchField reversed={true} fontSize='sm' mb='20px' id='9' label='Subscribe to newsletter' />
-			<SwitchField reversed={true} fontSize='sm' mb='20px' id='10' label='Email me when someone follows me' />
+     <SwitchField reversed={true} fontSize='sm' mb='20px' id='2' label='Get updates about community projects' />
+      <SwitchField reversed={true} fontSize='sm' mb='20px' id='3' label='Receive feedback from donors' />
+      <SwitchField reversed={true} fontSize='sm' mb='20px' id='4' label='Remind volunteers to rate their experiences' />
+      <SwitchField reversed={true} fontSize='sm' mb='20px' id='5' label='Find local meetups for networking' />
+      <SwitchField reversed={true} fontSize='sm' mb='20px' id='6' label='Stay informed about industry news' />
+      <SwitchField reversed={true} fontSize='sm' mb='20px' id='7' label='Stay updated on new initiatives' />
+      <SwitchField reversed={true} fontSize='sm' mb='20px' id='8' label='Learn about monthly program changes' />
+      <SwitchField reversed={true} fontSize='sm' mb='20px' id='9' label='Subscribe to our newsletter for updates' />
+      <SwitchField reversed={true} fontSize='sm' mb='20px' id='10' label='Get notified when someone follows our cause' />
 		</Card>
 	);
 }

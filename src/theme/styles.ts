@@ -5,12 +5,12 @@ export const globalStyles = {
       100: "#E9E3FF",
       200: "#422AFB",
       300: "#422AFB",
-      400: "#7551FF",
-      500: "#422AFB",
+      400: "#e1bb80",
+      500: "#FF6347", // Changed to orange
       600: "#3311DB",
       700: "#02044A",
       800: "#190793",
-      900: "#11047A",
+      900: "#ddc9b4",
     },
     brandScheme: {
       100: "#E9E3FF",
@@ -24,7 +24,7 @@ export const globalStyles = {
       900: "#02044A",
     },
     brandTabs: {
-      100: "#E9E3FF",
+      100: "#1e2d24",
       200: "#422AFB",
       300: "#422AFB",
       400: "#422AFB",
@@ -35,7 +35,7 @@ export const globalStyles = {
       900: "#02044A",
     },
     secondaryGray: {
-      100: "#E0E5F2",
+      100: "#7a6c5d",
       200: "#E1E9F8",
       300: "#F4F7FE",
       400: "#E9EDF7",
@@ -51,43 +51,43 @@ export const globalStyles = {
       600: "#E31A1A",
     },
     blue: {
-      50: "#EFF4FB",
-      500: "#3965FF",
+      50: "#344e41",
+      500: "#344e41",
     },
     orange: {
       100: "#FFF6DA",
-      500: "#FFB547",
+      500: "#FFB547", // New orange color
     },
     green: {
       100: "#E6FAF5",
       500: "#01B574",
     },
     navy: {
-      50: "tomato",
-      100: "#aac0fe",
+      50: "tomato", // Keeping navy color
+      100: "tomato",
       200: "tomato",
       300: "#728fea",
       400: "tomato",
       500: "#1b3bbb",
       600: "#24388a",
-      700: "#1B254B",
-      800: "#948979",
-      900: "#153448",
+      700: "#2a3d45",
+      800: "#354f52",
+      900: "#2f3e46",
     },
     gray: {
-      100: "#FAFCFE",
+      100: "#ddc9b4",
     },
   },
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
         overflowX: "hidden",
-        bg: mode("secondaryGray.300", "navy.900")(props),
+        bg: mode("#FF6347", "navy.900")(props), // Using orange in bg color
         fontFamily: "DM Sans",
         letterSpacing: "-0.5px",
       },
       input: {
-        color: "gray.700",
+        color: "#707EAE", // Changed to a gray color
       },
       html: {
         fontFamily: "DM Sans",

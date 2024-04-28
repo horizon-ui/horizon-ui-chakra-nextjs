@@ -8,82 +8,89 @@ type RowObj = {
 
 const tableDataCheck: RowObj[] = [
 	{
-		name: ['TOMATO AI', true],
+		name: ["John Smith", false],
 		quantity: 2458,
-		progress: '17.5%',
-		date: '12 Jan 2021',
-		info: false
+		progress: "17.5%",
+		date: "12 Jan 2024",
+		info: true,
 	},
 	{
-		name: ['TOMATO AI Free', true],
+		name: ["Emily Brown", false],
 		quantity: 1485,
-		progress: '10.8%',
-		date: '21 Feb 2021',
-		info: true
+		progress: "10.8%",
+		date: "21 Feb 2024",
+		info: true,
 	},
 	{
-		name: ['Weekly Update', true],
+		name: ["Michael Johnson", false],
 		quantity: 1024,
-		progress: '21.3%',
-		date: '13 Mar 2021',
-		info: true
+		progress: "21.3%",
+		date: "13 Mar 2024",
+		info: true,
 	},
 	{
-		name: ['Venus 3D Asset', true],
+		name: ["Sarah Wilson", false],
 		quantity: 858,
-		progress: '31.5%',
-		date: '24 Jan 2021',
-		info: true
+		progress: "31.5%",
+		date: "24 Jan 2024",
+		info: false,
 	},
 	{
-		name: ['Marketplace2', true],
+		name: ["David Garcia", false],
 		quantity: 258,
-		progress: '12.2%',
-		date: '24 Oct 2022',
-		info: false
+		progress: "12.2%",
+		date: "24 Oct 2024",
+		info: false,
 	},
 	{
-		name: ['Horizon UI Free', true],
+		name: ["Linda Martinez", false],
 		quantity: 1485,
-		progress: '10.8%',
-		date: '21 Feb 2021',
-		info: true
+		progress: "10.8%",
+		date: "21 Feb 2024",
+		info: false,
 	},
 	{
-		name: ['Weekly Update', true],
+		name: ["James Anderson", false],
 		quantity: 1024,
-		progress: '21.3%',
-		date: '13 Mar 2021',
-		info: true
+		progress: "21.3%",
+		date: "13 Mar 2024",
+		info: false,
 	},
 	{
-		name: ['Venus 3D Asset', true],
+		name: ["Alexis Turner", false],
 		quantity: 858,
-		progress: '31.5%',
-		date: '24 Jan 2021',
-		info: true
+		progress: "31.5%",
+		date: "24 Jan 2024",
+		info: false,
 	},
 	{
-		name: ['Horizon UI Free', true],
+		name: ["Daniel Clark", false],
+		quantity: 258,
+		progress: "12.2%",
+		date: "24 Oct 2024",
+		info: false,
+	},
+	{
+		name: ["Victoria Lee", false],
 		quantity: 1485,
-		progress: '10.8%',
-		date: '21 Feb 2021',
-		info: true
+		progress: "10.8%",
+		date: "21 Feb 2024",
+		info: false,
 	},
 	{
-		name: ['Weekly Update', true],
+		name: ["Jessica Hall", false],
 		quantity: 1024,
-		progress: '21.3%',
-		date: '13 Mar 2021',
-		info: true
+		progress: "21.3%",
+		date: "13 Mar 2024",
+		info: false,
 	},
 	{
-		name: ['Venus 3D Asset', true],
+		name: ["Samuel Parker", false],
 		quantity: 858,
-		progress: '31.5%',
-		date: '24 Jan 2021',
-		info: true
-	}
+		progress: "31.5%",
+		date: "24 Jan 2024",
+		info: false,
+	},
 ];
 
 export default tableDataCheck;
