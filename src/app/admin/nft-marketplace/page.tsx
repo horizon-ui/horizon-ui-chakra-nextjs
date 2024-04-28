@@ -49,6 +49,13 @@ import Nft3 from 'img/nfts/Nft3.png';
 import Nft4 from 'img/nfts/Nft4.png';
 import Nft5 from 'img/nfts/Nft5.png';
 import Nft6 from 'img/nfts/Nft6.png';
+import tomato from 'img/nfts/tomato.png';
+import brocoli from 'img/nfts/brocoli.png';
+import potato from 'img/nfts/potato.png';
+import beef from 'img/nfts/beef.png';
+import avocado from 'img/nfts/avocado.png';
+import pork from 'img/nfts/pork.png';
+import onion from 'img/nfts/onion.png';
 import Avatar1 from 'img/avatars/avatar1.png';
 import Avatar2 from 'img/avatars/avatar2.png';
 import Avatar3 from 'img/avatars/avatar3.png';
@@ -82,7 +89,7 @@ export default function NftMarketplace() {
               align={{ base: 'start', md: 'center' }}
             >
               <Text color={textColor} fontSize="2xl" ms="24px" fontWeight="700">
-                Trending NFTs
+                Trending Products
               </Text>
               <Flex
                 align="center"
@@ -96,7 +103,7 @@ export default function NftMarketplace() {
                   fontWeight="500"
                   me={{ base: '34px', md: '44px' }}
                 >
-                  Art
+                  Vegetables
                 </Link>
                 <Link
                   href="#music"
@@ -104,7 +111,7 @@ export default function NftMarketplace() {
                   fontWeight="500"
                   me={{ base: '34px', md: '44px' }}
                 >
-                  Music
+                  Fruits
                 </Link>
                 <Link
                   href="#collectibles"
@@ -112,63 +119,48 @@ export default function NftMarketplace() {
                   fontWeight="500"
                   me={{ base: '34px', md: '44px' }}
                 >
-                  Collectibles
+                  Meat
                 </Link>
                 <Link href="#sports" color={textColorBrand} fontWeight="500">
-                  Sports
+                  Nuts
                 </Link>
               </Flex>
             </Flex>
             <SimpleGrid columns={{ base: 1, md: 3 }} gap="20px">
               <NFT
-                name="Abstract Colors"
-                author="By Esthera Jackson"
+                name="Tomato"
+                author="200 lbs"
                 bidders={[
                   Avatar1,
                   Avatar2,
                   Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
                 ]}
-                image={Nft1}
-                currentbid="0.91 ETH"
+                image={tomato}
+                currentbid="0.91 USD/lb"
                 download="#"
               />
               <NFT
-                name="ETH AI Brain"
-                author="By Nick Wilson"
+                name="Brocoli"
+                author="100 lbs"
                 bidders={[
                   Avatar1,
                   Avatar2,
                   Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
                 ]}
-                image={Nft2}
-                currentbid="0.91 ETH"
+                image={brocoli}
+                currentbid="0.91 USD/lb"
                 download="#"
               />
               <NFT
-                name="Mesh Gradients "
-                author="By Will Smith"
+                name="Potato "
+                author="120lbs"
                 bidders={[
                   Avatar1,
                   Avatar2,
                   Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
                 ]}
-                image={Nft3}
-                currentbid="0.91 ETH"
+                image={potato}
+                currentbid="0.91 USD"
                 download="#"
               />
             </SimpleGrid>
@@ -180,7 +172,7 @@ export default function NftMarketplace() {
               ms="24px"
               fontWeight="700"
             >
-              Recently Added
+              Matched For You
             </Text>
             <SimpleGrid
               columns={{ base: 1, md: 3 }}
@@ -188,54 +180,75 @@ export default function NftMarketplace() {
               mb={{ base: '20px', xl: '0px' }}
             >
               <NFT
-                name="Swipe Circles"
-                author="By Peter Will"
+                name="Beef"
+                author="200 lbs"
                 bidders={[
                   Avatar1,
                   Avatar2,
                   Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
                 ]}
-                image={Nft4}
-                currentbid="0.91 ETH"
+                image={beef}
+                currentbid="0.91 USD"
                 download="#"
               />
               <NFT
-                name="Colorful Heaven"
-                author="By Mark Benjamin"
+                name="Avocado "
+                author="120lbs"
                 bidders={[
                   Avatar1,
                   Avatar2,
                   Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
                 ]}
-                image={Nft5}
-                currentbid="0.91 ETH"
+                image={avocado}
+                currentbid="0.91 USD"
                 download="#"
               />
               <NFT
-                name="3D Cubes Art"
+                name="Tomato"
+                author="200 lbs"
+                bidders={[
+                  Avatar1,
+                  Avatar2,
+                  Avatar3,
+                ]}
+                image={tomato}
+                currentbid="0.91 USD"
+                download="#"
+              />
+              <NFT
+                name="Pork"
+                author="200 lbs"
+                bidders={[
+                  Avatar1,
+                  Avatar2,
+                  Avatar3,
+                ]}
+                image={pork}
+                currentbid="0.91 USD"
+                download="#"
+              />
+              <NFT
+                name="Potato "
+                author="120lbs"
+                bidders={[
+                  Avatar1,
+                  Avatar2,
+                  Avatar3,
+                ]}
+                image={potato}
+                currentbid="0.91 USD"
+                download="#"
+              />
+              <NFT
+                name="Onion"
                 author="By Manny Gates"
                 bidders={[
                   Avatar1,
                   Avatar2,
                   Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
                 ]}
-                image={Nft6}
-                currentbid="0.91 ETH"
+                image={onion}
+                currentbid="0.91 USD"
                 download="#"
               />
             </SimpleGrid>
@@ -257,52 +270,46 @@ export default function NftMarketplace() {
               py="18px"
             >
               <Text color={textColor} fontSize="xl" fontWeight="600">
-                History
+                Order History
               </Text>
               <Button variant="action">See all</Button>
             </Flex>
 
             <HistoryItem
-              name="Colorful Heaven"
-              author="By Mark Benjamin"
+              name="Tomato"
+              author="90 lbs"
               date="30s ago"
-              image={Nft5}
-              price="0.91 ETH"
+              price="0.60 USD"
             />
             <HistoryItem
-              name="Abstract Colors"
-              author="By Esthera Jackson"
-              date="58s ago"
-              image={Nft1}
-              price="0.91 ETH"
+              name="Beef"
+              author="120 lbs"
+              date="2d ago"
+              price="0.94 USD"
             />
             <HistoryItem
-              name="ETH AI Brain"
-              author="By Nick Wilson"
-              date="1m ago"
-              image={Nft2}
-              price="0.91 ETH"
+              name="Beans"
+              author="300 lbs"
+              date="5d ago"
+              price="0.91 USD"
             />
             <HistoryItem
-              name="Swipe Circles"
-              author="By Peter Will"
-              date="1m ago"
-              image={Nft4}
-              price="0.91 ETH"
+              name="Avocados"
+              author="200 lbs"
+              date="10d ago"
+              price="0.98 USD"
             />
             <HistoryItem
-              name="Mesh Gradients "
-              author="By Will Smith"
-              date="2m ago"
-              image={Nft3}
-              price="0.91 ETH"
+              name="Tomatos"
+              author="340 lbs"
+              date="18d ago"
+              price="0.61 USD"
             />
             <HistoryItem
-              name="3D Cubes Art"
-              author="By Manny Gates"
-              date="3m ago"
-              image={Nft6}
-              price="0.91 ETH"
+              name="Beans"
+              author="88 lbs"
+              date="24d ago"
+              price="0.09 USD"
             />
           </Card>
         </Flex>

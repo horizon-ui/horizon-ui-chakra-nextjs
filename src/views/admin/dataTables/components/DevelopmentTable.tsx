@@ -16,9 +16,11 @@ import * as React from 'react';
 
 type RowObj = {
 	name: string;
-	tech: any;
+	tech: string[];
 	date: string;
 	progress: number;
+	priceMexico?: number;
+	priceUSA?: number;
 };
 
 const columnHelper = createColumnHelper<RowObj>();
@@ -51,45 +53,37 @@ export default function ComplexTable(props: { tableData: any }) {
 				</Flex>
 			)
 		}),
-		columnHelper.accessor('tech', {
-			id: 'tech',
+		columnHelper.accessor('priceUSA', {
+			id: 'priceUSA',
 			header: () => (
 				<Text
 					justifyContent='space-between'
 					align='center'
 					fontSize={{ sm: '10px', lg: '12px' }}
 					color='gray.400'>
-					STATUS
-				</Text>
-			),
-			cell: (info) => (
-				<Flex align='center'>
-					{info.getValue().map((item: string, key: number) => {
-						if (item === 'apple') {
-							return <AppleLogo key={key} color={iconColor} me='16px' h='18px' w='15px' />;
-						} else if (item === 'android') {
-							return <AndroidLogo key={key} color={iconColor} me='16px' h='18px' w='16px' />;
-						} else if (item === 'windows') {
-							return <WindowsLogo key={key} color={iconColor} h='18px' w='19px' />;
-						}
-					})}
-				</Flex>
-			)
-		}),
-		columnHelper.accessor('date', {
-			id: 'date',
-			header: () => (
-				<Text
-					justifyContent='space-between'
-					align='center'
-					fontSize={{ sm: '10px', lg: '12px' }}
-					color='gray.400'>
-					DATE
+					USA
 				</Text>
 			),
 			cell: (info) => (
 				<Text color={textColor} fontSize='sm' fontWeight='700'>
-					{info.getValue()}
+					${info.getValue()}
+				</Text>
+			)
+		}),
+		columnHelper.accessor('priceMexico', {
+			id: 'priceMexico',
+			header: () => (
+				<Text
+					justifyContent='space-between'
+					align='center'
+					fontSize={{ sm: '10px', lg: '12px' }}
+					color='gray.400'>
+					MX
+				</Text>
+			),
+			cell: (info) => (
+				<Text color={textColor} fontSize='sm' fontWeight='700'>
+					${info.getValue()}
 				</Text>
 			)
 		}),
@@ -130,7 +124,7 @@ export default function ComplexTable(props: { tableData: any }) {
 		<Card flexDirection='column' w='100%' px='0px' overflowX={{ sm: 'scroll', lg: 'hidden' }}>
 			<Flex px='25px' mb="8px" justifyContent='space-between' align='center'>
 				<Text color={textColor} fontSize='22px' fontWeight='700' lineHeight='100%'>
-					Complex Table
+					Price Comparison
 				</Text>
 				<Menu />
 			</Flex>

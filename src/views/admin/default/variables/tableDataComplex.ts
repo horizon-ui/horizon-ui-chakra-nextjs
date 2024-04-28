@@ -25,7 +25,7 @@ const tableDataComplex: RowObj[] = [
 		date: '13 Mar 2021'
 	},
 	{
-		name: 'Marketplace',
+		name: 'Marketplace4',
 		progress: 50.5,
 		status: 'Approved',
 		date: '24 Oct 2022'

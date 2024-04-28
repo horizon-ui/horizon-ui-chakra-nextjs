@@ -14,13 +14,13 @@ import Card from 'components/card/Card';
 import { FaEthereum } from 'react-icons/fa';
 
 export default function NFT(props: {
-  image: string | any;
+  // image: string | any;
   name: string;
   author: string;
   date: string;
   price: string | number;
 }) {
-  const { image, name, author, date, price } = props;
+  const { name, author, date, price } = props;
   // Chakra Color Mode
   const textColor = useColorModeValue('brands.900', 'white');
   const bgItem = useColorModeValue(
@@ -40,14 +40,6 @@ export default function NFT(props: {
       <Flex direction={{ base: 'column' }} justify="center">
         <Flex position="relative" align="center">
           <Box>
-            <Image
-              alt=""
-              src={image.src}
-              w="66px"
-              h="66px"
-              borderRadius="20px"
-              me="16px"
-            />
           </Box>
           <Flex
             direction="column"
@@ -81,7 +73,6 @@ export default function NFT(props: {
             me={{ base: '4px', md: '32px', xl: '10px', '3xl': '32px' }}
             align="center"
           >
-            <Icon as={FaEthereum} color={textColor} width="9px" me="7px" />
             <Text
               w="max-content"
               fontWeight="700"
@@ -91,7 +82,7 @@ export default function NFT(props: {
               {price}
             </Text>
           </Flex>
-          <Text ms="auto" fontWeight="700" fontSize="sm" color={textColorDate}>
+          <Text ms="auto" fontWeight="700" fontSize="sm"  width="85px" color="secondaryGray.600">
             {date}
           </Text>
         </Flex>

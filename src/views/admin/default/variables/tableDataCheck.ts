@@ -36,7 +36,7 @@ const tableDataCheck: RowObj[] = [
 		info: true
 	},
 	{
-		name: [ 'Marketplace', true ],
+		name: [ 'Marketplace3', true ],
 		quantity: 258,
 		progress: '12.2%',
 		date: '24 Oct 2022',
